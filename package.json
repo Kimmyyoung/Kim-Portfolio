@@ -1,0 +1,23 @@
+{
+  "name": "kimmy-profolio-project",
+  "version": "1.0.0",
+  "description": "Portfolio Project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node scripts/app.js"
+  },
+  "author": "Heeyoung Kim (kimmy)",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "npm:gsap-trial@^3.10.3",
+    "gsap-trial": "^3.10.3",
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11"
+  },
+  "keywords": [],
+  "type": "module"
+}
