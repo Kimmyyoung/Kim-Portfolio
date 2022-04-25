@@ -5,13 +5,14 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node scripts/app.js"
+    "start": "node scripts/app.js"
   },
   "author": "Heeyoung Kim (kimmy)",
   "license": "ISC",
   "dependencies": {
-    "gsap": "npm:gsap-trial@^3.10.3",
+    "gsap": "^3.10.3",
     "gsap-trial": "^3.10.3",
+    "lodash": "^4.17.21",
     "parcel-bundler": "^1.12.5"
   },
   "devDependencies": {

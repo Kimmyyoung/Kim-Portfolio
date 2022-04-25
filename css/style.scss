@@ -33,18 +33,24 @@ html{
   font-family: 'TT Firs Neue', Arial, sans-serif;
 }
 
-.body :after {
-  pointer-events: none;
-  background-image: url('../img/noise.png');
-  background-size: 75%;
+body:after {
   content: '';
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/texture.svg);
   position: fixed;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  right: 0;
   bottom: 0;
-  opacity: 6%;
+  right: 0;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0.2;
+  filter: invert(1);
+  background-size: cover;
 }
+
+
 
 .cover-container {
   max-width: 42em;
@@ -86,24 +92,37 @@ header{
   margin-top: 1%;
 }
 
-.nav-masthead .nav-link {
-  font-size: 1rem;
-  padding: .25rem 0;
-  font-weight: 300;
-  color: white;
-  background-color: val(--blue);
-  border-bottom: .10rem solid transparent;
+// nav bar
+a{
+  color: white !important;
 }
 
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: white;
-  cursor: pointer;
+.nav-masthead{
   color: white;
 }
 
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+}
+.nav-link:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  color: #fff;
+  background: #fff;
+  bottom: -4px;
+  right: 0;
+  width: 0%;
+  transition: 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+
+.nav-link:hover:before {
+  left: 0;
+  width: 100%;
+  color: #fff;
 }
 
 .nav-masthead .active {
@@ -113,11 +132,6 @@ header{
 
 // hero section
 
-.animate {
-  animation-name:slid-left;
-  animation-duration: 2.5s;
-}
-
 .hero {
   display: flex;
   align-items: center;
@@ -126,7 +140,7 @@ header{
 }
 
 .hero__title {
-  opacity: 0;
+  
   color: white;
   text-align: center;
   line-height: 1000em;
@@ -136,6 +150,19 @@ header{
   font-size: 60px;
   line-height: 4rem;
   letter-spacing: 0.1em;
+}
+
+
+.hero-ratate-section{
+  align-items: left;
+  position : relative;
+  text-align: center;
+  font-size: 3.5em;
+  color: white;
+}
+
+.txt-rotate {
+  color:#f47731;
 }
 
 .hero_cursor{
@@ -151,19 +178,9 @@ header{
   animation: flash 0.5s none infinite alternate;
 }
 
-@keyframes flash{
-  0%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
-}
 
 
 // sunsection
-
-
 .sun {
   position: absolute;
   background-color: var(--blue);
