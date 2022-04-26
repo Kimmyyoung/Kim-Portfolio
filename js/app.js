@@ -6,33 +6,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-//MouseCursor
-  let mouseCursor = document.querySelector(".cursor");
-  let navLinks = document.querySelectorAll(".nav .nav-link");
-
-  window.addEventListener("scroll", cursor);
-  window.addEventListener("mousemove", cursor);
-  
-  function cursor(e) {
-    mouseCursor.style.left = e.pageX + "px";
-    mouseCursor.style.top = e.pageY - scrollY + "px";
-  }
-
-  navLinks.forEach((link) => {
-    link.addEventListener("mouseover", () => {
-      mouseCursor.classList.add("link-grow");
-      mouseCursor.style.zIndex = "-1";
-      link.classList.add("hovered-link");
-    });
-    link.addEventListener("mouseleave", () => {
-      mouseCursor.classList.remove("link-grow");
-      mouseCursor.style.zIndex = "1000";
-      link.classList.remove("hovered-link");
-    });
-});
 
 //Main Text Rotate
-const TxtRotate = function(el, toRotate, period) {
+const textrotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -42,7 +18,7 @@ const TxtRotate = function(el, toRotate, period) {
   this.isDeleting = false;
 };
 
-TxtRotate.prototype.tick = function() {
+textrotate.prototype.tick = function() {
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
@@ -79,7 +55,7 @@ window.onload = function() {
     var toRotate = elements[i].getAttribute('data-rotate');
     var period = elements[i].getAttribute('data-period');
     if (toRotate) {
-      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+      new textrotate(elements[i], JSON.parse(toRotate), period);
     }
   }
   // INJECT CSS
@@ -91,57 +67,89 @@ window.onload = function() {
 
 
 
-const tlHero = () =>
-  gsap
-    .timeline()
-    .to("top", {
-      opacity: 0,
-      y: -100,
-      stagger: { from: "random", each: 0.01 }
-    })
-    .from(
-      ".sun__circle",
-      {
-        yPercent: 10,
-        scale: 0.5,
-        opacity: 40,
-        transformOrigin: "bottom center"
-      },
-      "<"
-    );
+// const tlHero = () =>
+//   gsap
+//     .timeline()
+//     .to("top", {
+//       opacity: 0,
+//       y: -100,
+//       stagger: { from: "random", each: 0.01 }
+//     })
+//     .from(
+//       ".sun__circle",
+//       {
+//         yPercent: 10,
+//         scale: 0.5,
+//         opacity: 40,
+//         transformOrigin: "bottom center"
+//       },
+//       "<"
+//     );
 
-const tl = gsap.timeline({
-  defaults: { ease: "none", transformOrigin: "50% 50%" },
-  scrollTrigger: {
-    trigger: ".hero",
-    start: "top top",
-    end: "bottom top",
-    scrub: true
-  }
+// const tl = gsap.timeline({
+//   defaults: { ease: "none", transformOrigin: "50% 50%" },
+//   scrollTrigger: {
+//     trigger: ".hero",
+//     start: "top top",
+//     end: "bottom top",
+//     scrub: true
+//   }
+// });
+
+// const nav = document.querySelector("nav");
+
+
+// tl.to(nav, { y: "-100%", duration: 0.16 }, 0)
+
+// ScrollTrigger.create({
+//   trigger: ".hero",
+//   start: "top top",
+//   end: "bottom top",
+//   pin: true,
+//   scrub: 1,
+//   animation: tlHero()
+// });
+
+// gsap.to(".asterisk__inner", {
+//   rotate: 360 * 3,
+//   scrollTrigger: {
+//     trigger: ".hero",
+//     endTrigger: ".lyrics",
+//     start: "top top",
+//     end: "bottom top",
+//     scrub: 1
+//   }
+// });
+
+//featured-work section
+
+
+//MouseCursor
+let mouseCursor = document.querySelector(".cursor");
+let navLinks = document.querySelectorAll(".nav .nav-link");
+
+window.addEventListener("scroll", cursor);
+window.addEventListener("mousemove", cursor);
+
+
+function cursor(e) {
+  mouseCursor.style.left = e.pageX + "px";
+  mouseCursor.style.top = e.pageY + "px";
+}
+
+
+
+navLinks.forEach((link) => {
+  link.addEventListener("mouseover", () => {
+    mouseCursor.classList.add("link-grow");
+    mouseCursor.style.zIndex = "-1";
+    link.classList.add("hovered-link");
+  });
+  link.addEventListener("mouseleave", () => {
+    mouseCursor.classList.remove("link-grow");
+    mouseCursor.style.zIndex = "1000";
+    link.classList.remove("hovered-link");
+  });
 });
 
-const nav = document.querySelector("nav");
-
-
-tl.to(nav, { y: "-100%", duration: 0.16 }, 0)
-
-ScrollTrigger.create({
-  trigger: ".hero",
-  start: "top top",
-  end: "bottom top",
-  pin: true,
-  scrub: 1,
-  animation: tlHero()
-});
-
-gsap.to(".asterisk__inner", {
-  rotate: 360 * 3,
-  scrollTrigger: {
-    trigger: ".hero",
-    endTrigger: ".lyrics",
-    start: "top top",
-    end: "bottom top",
-    scrub: 1
-  }
-});
 

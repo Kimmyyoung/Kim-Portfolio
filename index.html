@@ -15,36 +15,35 @@
     <!-- script -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
 
   <body class="d-flex h-100 text-center body">
+    <div class="cursor" id="cursor"></div>
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="d-flex h-100 p-3 mx-auto flex-column">
 
-        <header class="mb-auto">
-          <div class="cursor" id="cursor"></div>
+        <nav class="mb-auto">
             <div>
               <h3 class="float-md-start mb-0">Heeyoung Kim</h3>
-              <nav class="nav nav-masthead justify-content-center float-md-end">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                <a class="nav-link" href="#">Work</a>
-                <a class="nav-link" href="#">About</a>
-              </nav>
             </div>
-          </header>
+              <ul class="nav nav-masthead justify-content-center float-md-end">
+                <li class="nav-link active" aria-current="page" href="#">Home</li>
+                <li class="nav-link" href="#">Work</li>
+                <li class="nav-link" href="#">About</li>
+                </ul>
+            
+          </nav>
 
-   <div id="wrapper">
-     <div id="content">
 
-                <section class="hero animate" data-animate="motion">
-                  
-                  <!-- <div class="sun">
-                    <div class="sun__circle"></div>
-                  </div> -->
-  
+    
+                <!-- main typo -->
+                <section class="hero animate" data-animate="motion"> 
                   <div class="hero-section">
-                    <h2 class="hero__title">Hi, I am Kimmy👋 </h2>       
+                    <h2 class="hero__title" data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="5000">Hi, I am Kimmy👋 </h2>       
                     <h2 class="hero-ratate-section">I mainly do
                       <span
                          class="txt-rotate"
@@ -52,28 +51,32 @@
                          data-rotate='[ "Design.", "Code."]'></span>
                     </h2>    
                   </div>
-
-                  <br/>
-
-
                 </section>
-          
-                <!-- <section class="lyrics">
-                  <h1 class="lyrics__title" data-lag="0.2">What I do</h1>
-                  <p>
-                    <span class="lyrics__ball" data-lag="1.1"></span>I Design & Code,
-                  </p>
-                  <p>
-                    UI Design
-                    <span class="asterisk" data-lag="1.2"
-                      ><span class="asterisk__inner">✳︎</span>
-                    </span>
-                    Development
-                  </p>
+                <!-- main typo -->
+                
+                <section class="featured-card">
+                  
+                  <div class="featured-title aos-init aos-animate">
+                    <h2 data-aos="fade-up" data-aos-duration="5000">FEATURED WORK</h2>  
+                  </div>
 
-                </section> -->
-
-
+                  <div class="first featured">
+                    <img class="featured-profile-img" src="https://cdn.gamer-network.net/2018/metabomb/leagueoflegendsbestcarrychampions2018pantheon.jpg" alt="">
+                    <div class="featured-description-bk"></div>
+                    <div class="featured-logo">
+                      <img src="https://miscmedia-9gag-fun.9cache.com/images/thumbnail-facebook/1557291375.3948_Dy2yZu_n.jpg" alt="">
+                    </div>
+                    <div class="featured-description">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div  class="featured-date">
+                      <p>20.02.2019</p>
+                    </div>
+                    <div class="featured-btn">
+                      <a href="#">Learn More</a>
+                    </div>
+                  </div>
+                </section>
                 
                 <section class="outro mt-auto text-white-50">
                       <div class="outro__text__main">
@@ -93,16 +96,15 @@
                           </a>
                         </div>
 
-                        <div class="smile" data-lag=".5">)</div>
+                        <!-- <div class="smile" data-lag=".5">)</div> -->
                       </div>
                    
                     </section>  
+     
+      
 
-      </div>
-     </div>
-
-
-    </div>
+         
     <script type="module" src="js/app.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
