@@ -1,11 +1,3 @@
-import { gsap } from "../gsap-public/src/all.js";
-import { ScrollTrigger } from "../gsap-public/src/ScrollTrigger.js";
-
-gsap.registerPlugin(ScrollTrigger);
-
-
-
-
 
 //Main Text Rotate
 const textrotate = function(el, toRotate, period) {
@@ -67,66 +59,11 @@ window.onload = function() {
 
 
 
-// const tlHero = () =>
-//   gsap
-//     .timeline()
-//     .to("top", {
-//       opacity: 0,
-//       y: -100,
-//       stagger: { from: "random", each: 0.01 }
-//     })
-//     .from(
-//       ".sun__circle",
-//       {
-//         yPercent: 10,
-//         scale: 0.5,
-//         opacity: 40,
-//         transformOrigin: "bottom center"
-//       },
-//       "<"
-//     );
-
-// const tl = gsap.timeline({
-//   defaults: { ease: "none", transformOrigin: "50% 50%" },
-//   scrollTrigger: {
-//     trigger: ".hero",
-//     start: "top top",
-//     end: "bottom top",
-//     scrub: true
-//   }
-// });
-
-// const nav = document.querySelector("nav");
-
-
-// tl.to(nav, { y: "-100%", duration: 0.16 }, 0)
-
-// ScrollTrigger.create({
-//   trigger: ".hero",
-//   start: "top top",
-//   end: "bottom top",
-//   pin: true,
-//   scrub: 1,
-//   animation: tlHero()
-// });
-
-// gsap.to(".asterisk__inner", {
-//   rotate: 360 * 3,
-//   scrollTrigger: {
-//     trigger: ".hero",
-//     endTrigger: ".lyrics",
-//     start: "top top",
-//     end: "bottom top",
-//     scrub: 1
-//   }
-// });
-
-//featured-work section
-
-
 //MouseCursor
 let mouseCursor = document.querySelector(".cursor");
 let navLinks = document.querySelectorAll(".nav .nav-link");
+let featuredbtn = document.querySelectorAll(".featured .featured-card");
+
 
 window.addEventListener("scroll", cursor);
 window.addEventListener("mousemove", cursor);
@@ -143,13 +80,21 @@ navLinks.forEach((link) => {
   link.addEventListener("mouseover", () => {
     mouseCursor.classList.add("link-grow");
     mouseCursor.style.zIndex = "-1";
-    link.classList.add("hovered-link");
   });
   link.addEventListener("mouseleave", () => {
     mouseCursor.classList.remove("link-grow");
     mouseCursor.style.zIndex = "1000";
-    link.classList.remove("hovered-link");
   });
 });
 
 
+featuredbtn.forEach((link) => {
+  link.addEventListener("mouseover", () => {
+    mouseCursor.classList.add("link-grow-2");
+    mouseCursor.style.zIndex = "-1";
+  });
+  link.addEventListener("mouseleave", () => {
+    mouseCursor.classList.remove("link-grow-2");
+    mouseCursor.style.zIndex = "3000";
+  });
+});
