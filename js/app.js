@@ -98,3 +98,5 @@ featuredbtn.forEach((link) => {
     mouseCursor.style.zIndex = "3000";
   });
 });
+
+

@@ -248,9 +248,9 @@ li {
   background-color: white;
   border-radius: 30px;
   position: absolute;
-  top: 55%;
-  left: -5px;
-  height: 65%;
+  top: 0%;
+  left: 40%;
+  height: 100%;
   width: 108%;
 }
 
@@ -264,8 +264,8 @@ li {
   border-radius: 20px;
   background-color: black;
   position: absolute;
-  bottom: 30%;
-  left: 30px;
+  bottom: 40%;
+  left: 35%;
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
 }
@@ -279,8 +279,13 @@ li {
   color: black;
   font-weight: 1000;
   font-size: 2rem;
-  left: 150px;
-  bottom: 8%;
+  left: 55%;
+  bottom: 0%;
+  top: 30%;
+}
+
+.featured-description p {
+  padding-bottom: 1rem;
 }
 
 .featured-description-title {
@@ -302,26 +307,33 @@ li {
 }
 
 .featured-btn {
+  width: 150px;
+  height: 45px;
+  border: none;
+  border-radius: 50px;
   position: absolute;
-  font-weight: 400;
-  right: 30px;
-  bottom: 10%;
+  right: 22%;
+  bottom: 23%;
   padding: 10px 20px;
   background-color: #f47731;
-  border: 1px solid #fff;
-  border-radius: 12px;
+  color: white;
+}
+.featured-btn :hover {
+  color: black;
+  font-weight: 400;
 }
 
 .featured-btn a {
   color: #fff !important;
-  font-weight: 600;
+  font-weight: 300;
+  text-decoration: none;
 }
 
 .featured-date {
   position: absolute;
   color: grey;
-  left: 30px;
-  bottom: 10%;
+  left: 85%;
+  bottom: 1%;
 }
 
 .footer {
