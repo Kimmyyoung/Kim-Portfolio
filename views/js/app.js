@@ -1,4 +1,3 @@
-
 //Main Text Rotate
 const textrotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
@@ -100,3 +99,15 @@ featuredbtn.forEach((link) => {
 });
 
 
+// workpage-filter gallery
+
+var $btns = $('.work-btn').click(function() {
+  if (this.id == 'all') {
+    $('#parent > div').fadeIn(450);
+  } else {
+    var $el = $('.' + this.id).fadeIn(450);
+    $('#parent > div').not($el).hide();
+  }
+  $btns.removeClass('work-active');
+  $(this).addClass('work-active');
+})
