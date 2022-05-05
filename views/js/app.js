@@ -101,13 +101,47 @@ featuredbtn.forEach((link) => {
 
 // workpage-filter gallery
 
-var $btns = $('.work-btn').click(function() {
-  if (this.id == 'all') {
-    $('#parent > div').fadeIn(450);
-  } else {
-    var $el = $('.' + this.id).fadeIn(450);
-    $('#parent > div').not($el).hide();
-  }
-  $btns.removeClass('work-active');
-  $(this).addClass('work-active');
+// var $btns = $('.work-btn').click(function() {
+//   if (this.id == 'all') {
+//     $('#parent > div').fadeIn(450);
+//   } else {
+//     var $el = $('.' + this.id).fadeIn(450);
+//     $('#parent > div').not($el).hide();
+//   }
+//   $btns.removeClass('work-active');
+//   $(this).addClass('work-active');
+// })
+
+
+
+
+
+$(document).ready(function(){
+  $('.work-btn').click(function(){
+    const value= $(this).attr('data-filter');
+    if (value == 'all'){
+      $('.box').show('1000');
+    }else if(value == 'development'){
+      $('.development').show('1000');
+    }else if(value == 'design'){
+      $('.design').show('1000');
+    }
+   
+    $('.box').not('.'+value).hide('1000');
+    $('.box').work('.'+value).show('1000');
+
+  })
 })
+
+// add active class on selected tab
+$('.work-btn').click(function(){
+  $(this).addClass('work-active').siblings().removeClass('work-active');
+})
+
+
+// AOS.init({
+//   disable: function() {
+//     var maxWidth = 800;
+//     return window.innerWidth < maxWidth;
+//   }
+// });

@@ -401,48 +401,82 @@ li {
   text-transform: uppercase;
 }
 
+.lg-heading {
+  color: white;
+  line-height: 1000em;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 4rem;
+  letter-spacing: 0.1em;
+}
+
 .filter {
-  background-color: white;
   margin-top: 5%;
-  width: 1370px;
+  width: 100vw;
   align-items: center;
 }
 
 .work-btn {
-  border: none;
-  background: linear-gradient(to bottom, #3498db, #2980b9);
-  border-radius: 3px;
-  font-family: Arial;
-  color: #ffffff;
-  padding: 5px 10px 5px 10px;
-  text-decoration: none;
-  margin: 5px;
+  border: solid 1px #f47731;
+  border-radius: 10%;
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+  color: #f47731;
+  padding: 0.5rem 0.2rem;
+  margin: 0 0.5rem;
+  width: 250px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 20px;
+}
+
+.work-active {
+  border: solid 1px #f47731;
+  border-radius: 10%;
+  background-color: #f47731;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  padding: 0.5rem 0.2rem;
+  margin: 0 0.5rem;
+  width: 250px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 20px;
+  transform: translateY(-7px);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.73);
+}
+
+.work-card {
+  align-items: center;
+  background-color: #f47731;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 0;
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+  display: block;
 }
 
 #parent {
   align-items: center;
-}
-
-.work-active {
-  background: linear-gradient(to bottom, #3cb0fd, #3498db);
-  text-decoration: none;
+  padding: 5%;
 }
 
 .box {
-  background-image: linear-gradient(to bottom, #3498db, #2980b9);
-  padding: 10px;
-  height: 100px;
-  width: calc(25% - 10px);
-  float: left;
-  margin: 5px;
-  text-align: center;
-  border-radius: 3px;
-  color: #fff;
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 2%;
 }
 
 .spacer {
   clear: both;
-  height: 20px;
+  height: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */
