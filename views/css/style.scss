@@ -513,7 +513,94 @@ li {
   border-radius: 20px;
   display:inline-block;
   padding: 2%;
+  transition: all 0.5s;
 }
+
+.box1{
+  background: url("http://www.ecopaccanada.com/wp-content/uploads/2022/04/2-scaled.jpg");
+}
+
+.box2{
+  background: url("http://www.ecopaccanada.com/wp-content/uploads/2022/04/3-scaled.jpg") ;
+}
+
+.box3{
+  background: url("http://www.ecopaccanada.com/wp-content/uploads/2022/04/2-scaled.jpg");
+}
+
+.box4{
+  background: url("http://www.ecopaccanada.com/wp-content/uploads/2022/04/3-scaled.jpg") ;
+}
+
+
+.box5{
+  background: url("http://www.ecopaccanada.com/wp-content/uploads/2022/04/2-scaled.jpg");
+}
+
+.box6{
+  background: url("http://www.ecopaccanada.com/wp-content/uploads/2022/04/3-scaled.jpg") ;
+}
+
+
+
+.overlay-contents{
+  text-decoration: none;
+}
+
+.overlay-title{
+  text-decoration: none;
+  color: #1b2b65;
+  letter-spacing: 2px;
+  line-height: 40px;
+  opacity: 0;
+  transform : translateY(40px);
+  transition: all 0.7s;
+  margin: 18% 0% 3% 0%;
+
+  & h3{
+    font-size: 40px;
+    font-weight: 600;
+  }
+}
+
+.overlay-tools{
+  text-decoration: none;
+  color: white;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s;
+  margin: 5% 0% 3% 0%;
+
+  & p{
+    letter-spacing: 4px;
+    font-size: 15px;
+    line-height: auto;
+    font-weight: 200;
+  }
+
+}
+
+.box:hover .work-overlay{
+  opacity: 1;
+  
+  & .overlay-title{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  
+  & .overlay-tools{
+    transform: translateY(0px);
+    transition-delay: 0.3s;
+    opacity: 1;
+  }
+
+}
+
+
+
+
+
+
 
 .spacer {
   clear: both;
