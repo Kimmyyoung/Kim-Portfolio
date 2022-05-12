@@ -99,21 +99,6 @@ featuredbtn.forEach((link) => {
 });
 
 
-// workpage-filter gallery
-
-// var $btns = $('.work-btn').click(function() {
-//   if (this.id == 'all') {
-//     $('#parent > div').fadeIn(450);
-//   } else {
-//     var $el = $('.' + this.id).fadeIn(450);
-//     $('#parent > div').not($el).hide();
-//   }
-//   $btns.removeClass('work-active');
-//   $(this).addClass('work-active');
-// })
-
-
-
 
 
 $(document).ready(function(){
@@ -137,11 +122,3 @@ $(document).ready(function(){
 $('.work-btn').click(function(){
   $(this).addClass('work-active').siblings().removeClass('work-active');
 })
-
-
-// AOS.init({
-//   disable: function() {
-//     var maxWidth = 800;
-//     return window.innerWidth < maxWidth;
-//   }
-// });

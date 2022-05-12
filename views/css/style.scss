@@ -26,12 +26,31 @@ html{
   scroll-behavior: smooth;
 }
 
-.body {
-  background-color: #1b2b65;
+// 112B3C
+body{
+  background: linear-gradient(-45deg, #ee7752, #0E185F, #1b2b65, #205375);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
   color: white;
   margin-left: -1%;
   font-family: 'TT Firs Neue', Arial, sans-serif;
 }
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 
 body:after {
   content: '';
@@ -123,6 +142,7 @@ nav{
   padding: 0.5rem 3rem;
   align-items: center;
   justify-content: space-around;
+
 }
 
 
@@ -203,7 +223,7 @@ li {
   line-height: 1000em;
   max-width: 1400px;
   margin: 0 auto;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 60px;
   line-height: 4rem;
   letter-spacing: 0.1em;
@@ -216,6 +236,8 @@ li {
   text-align: center;
   font-size: 3.5em;
   color: white;
+  font-weight:600;
+  padding-top: 3%;
 }
 
 .txt-rotate {
@@ -385,7 +407,6 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1b2b65;
   background-size: cover;
   background-position: 10% 40%;
   margin : 3% 0%;
@@ -597,12 +618,60 @@ li {
 }
 
 
-
-
-
-
-
 .spacer {
   clear: both;
   height: 60px;
+}
+
+
+// about page
+
+.about-intro{
+  padding: 10rem 10rem 0 rem 10rem;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.about-intro h1{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+.about-card{
+  align-items: center;
+  background-color: #f47731;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 0;
+  margin: 0 -4rem 0 3rem;
+  width:100vw;
+  font-family: 'Poppins', sans-serif;
+  display: block;
+}
+
+.about-card{
+  color: white;
+}
+
+.about-card h1{
+  color: #1b2b65 !important;
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.about-card p{
+  text-align: left;
+  line-height: 1.5;
+  margin: 10% 5% 5% 5%;
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+}
+
+.about-img{
+  width: 500px;
+  height : 625px;
+  margin-left: 20%;
 }
