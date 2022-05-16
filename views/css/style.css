@@ -689,5 +689,33 @@ li {
     left: -10%;
   }
 }
+.project-info {
+  color: black;
+  background-color: white;
+  padding: 6rem 10rem 6rem 20rem;
+  text-align: left;
+  margin-top: 4rem;
+  margin-left: -2rem;
+}
+.project-info .lg-heading {
+  color: black;
+}
+
+.noteapp-thumb {
+  background-image: url(http://www.ecopaccanada.com/wp-content/uploads/2022/04/2-scaled.jpg);
+  min-height: 600px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: -2rem;
+}
+
+.project-detail {
+  background-color: white;
+  color: black;
+  text-align: left;
+  padding-bottom: 3rem;
+}
 
 /*# sourceMappingURL=style.css.map */
