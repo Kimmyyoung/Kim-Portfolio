@@ -541,7 +541,6 @@ li {
 .overlay-title h3 {
   font-size: 40px;
   font-weight: 600;
-  text-shadow: 0px 1px 1px #DDEEFF;
 }
 
 .overlay-tools {
@@ -559,14 +558,15 @@ li {
   font-weight: 200;
 }
 
-.box:hover .work-overlay {
+.box:hover {
   opacity: 1;
+  background: rgba(0, 0, 0, 0.7);
 }
-.box:hover .work-overlay .overlay-title {
+.box:hover .overlay-title {
   transform: translateY(0px);
   opacity: 1;
 }
-.box:hover .work-overlay .overlay-tools {
+.box:hover .overlay-tools {
   transform: translateY(0px);
   transition-delay: 0.3s;
   opacity: 1;
@@ -690,32 +690,74 @@ li {
   }
 }
 .project-info {
-  color: black;
-  background-color: white;
-  padding: 6rem 10rem 6rem 20rem;
+  padding: 6rem 10rem 6rem 10rem;
   text-align: left;
-  margin-top: 4rem;
-  margin-left: -2rem;
+  color: white;
+  margin: 4rem 0rem 0rem -1rem;
+  background-color: #f47731;
 }
-.project-info .lg-heading {
-  color: black;
+.project-info .project-overview-card {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+.project-info .project-cat {
+  color: white;
+  letter-spacing: 1.8px;
+}
+.project-info .project-overview p {
+  margin-top: 1rem;
+}
+.project-info .sm-heading {
+  font-weight: 600;
+  letter-spacing: 1.8px;
+}
+.project-info .project-info-detail {
+  margin-top: 3rem;
+}
+.project-info .content {
+  margin-top: 1rem;
+  letter-spacing: 1px;
+}
+.project-info .info-detail {
+  display: flex;
+  flex-direction: column;
 }
 
 .noteapp-thumb {
-  background-image: url(http://www.ecopaccanada.com/wp-content/uploads/2022/04/2-scaled.jpg);
+  background-image: url("http://www.ecopaccanada.com/wp-content/uploads/2022/04/2-scaled.jpg");
   min-height: 600px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-left: -2rem;
+  margin-left: -1rem;
 }
 
 .project-detail {
+  padding: 6rem 10rem 6rem 10rem;
   background-color: white;
-  color: black;
+  color: black !important;
   text-align: left;
-  padding-bottom: 3rem;
+  margin-left: -1rem;
+}
+.project-detail .phase {
+  padding: 0rem 5rem 5rem 5rem;
+}
+.project-detail .phase-img {
+  align-items: center;
+}
+.project-detail .phase-content {
+  max-width: 500px;
+}
+.project-detail .phase h1 {
+  color: #f47731 !important;
+  margin-bottom: 2.5rem;
+}
+.project-detail .phase-num {
+  color: #0E185F;
+  font-size: 2.7rem;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */

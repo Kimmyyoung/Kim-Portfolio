@@ -101,6 +101,8 @@ featuredbtn.forEach((link) => {
 
 
 
+
+// work page work-grid
 $(document).ready(function(){
   $('.work-btn').click(function(){
     const value= $(this).attr('data-filter');
@@ -122,3 +124,5 @@ $(document).ready(function(){
 $('.work-btn').click(function(){
   $(this).addClass('work-active').siblings().removeClass('work-active');
 })
+
+
