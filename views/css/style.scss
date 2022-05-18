@@ -3,6 +3,7 @@
   --bright-blue: #2c449a;
   --orange: #f47731;
 }
+
 // font
 @font-face {
   font-family: 'TT Firs Neue';
@@ -22,8 +23,12 @@
   font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
 html{
   scroll-behavior: smooth;
+  width: 100vw;
 }
 
 // background: linear-gradient(-45deg, #0E185F, #ee7752, #1b2b65, #205375);
@@ -764,13 +769,15 @@ li {
 
 //Project Page
 
-
+.project{
+  font-family: 'Poppins', sans-serif;
+}
 
 .project-info {
   padding: 6rem 10rem 6rem 10rem;
   text-align: left;
   color: white;
-  margin: 4rem 0rem 0rem -1rem;
+  margin: 4rem -1rem 0rem -1rem;
   background-color: #f47731;
 
   & .project-overview-card {
@@ -791,20 +798,22 @@ li {
   & .sm-heading {
     font-weight: 600;
     letter-spacing: 1.8px;
+    text-transform: uppercase;
   }
   
   & .project-info-detail{
-    margin-top: 3rem; 
+    margin-top: 5rem; 
   }
 
   & .content{
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     letter-spacing: 1px;
   } 
 
   & .info-detail {
     display: flex;
     flex-direction: column;
+    border-left: solid 3px white;
   }
 }
 
@@ -815,19 +824,20 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-left: -1rem;
+  margin: 0rem -1rem 0rem -1rem;
 }
 
 
 
 //project-detail section
 
+
 .project-detail {
   padding: 6rem 10rem 6rem 10rem;
   background-color: white;
   color: black !important;
   text-align: left;
-  margin-left: -1rem;
+  margin: 0rem -1rem 0rem -1rem;
   
 
   & .phase{
@@ -836,19 +846,20 @@ li {
   & .phase-img{
     align-items: center;    
   }
-  & .phase-content{
-    max-width: 500px;
-  }
 
+  & .content-2{
+    text-align: right !important;
+  }
   & .phase h1{
     color:#f47731 !important;
     margin-bottom: 2.5rem;
+    font-size: 3rem;
   }
   
   & .phase-num{
     color :#0E185F;
-    font-size: 2.7rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 800;
   }
 }
 
