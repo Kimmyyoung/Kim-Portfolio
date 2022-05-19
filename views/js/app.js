@@ -61,7 +61,8 @@ window.onload = function() {
 //MouseCursor
 let mouseCursor = document.querySelector(".cursor");
 let navLinks = document.querySelectorAll(".nav .nav-link");
-let featuredbtn = document.querySelectorAll(".featured .featured-card");
+let featured = document.querySelectorAll(".featured-card .featured");
+
 
 
 window.addEventListener("scroll", cursor);
@@ -87,17 +88,16 @@ navLinks.forEach((link) => {
 });
 
 
-featuredbtn.forEach((link) => {
+featured.forEach((link) => {
   link.addEventListener("mouseover", () => {
     mouseCursor.classList.add("link-grow-2");
-    mouseCursor.style.zIndex = "-1";
+    mouseCursor.style.zIndex = "1";
   });
   link.addEventListener("mouseleave", () => {
     mouseCursor.classList.remove("link-grow-2");
-    mouseCursor.style.zIndex = "3000";
+    mouseCursor.style.zIndex = "1000";
   });
 });
-
 
 
 
@@ -124,5 +124,26 @@ $(document).ready(function(){
 $('.work-btn').click(function(){
   $(this).addClass('work-active').siblings().removeClass('work-active');
 })
+
+//loading page
+let navbarhid = function(){
+  document.getElementById("mb-auto").className += "navloading";
+}
+
+let navbarshw = setTimeout(function(){
+  document.getElementById("mb-auto").className -= "navloading";
+},2500);
+
+let loading = setTimeout(function() {
+  document.getElementById("loading-page").className += "loaded";
+  document.getElementById("loader").className += "opzero";
+  document.getElementById("lastray").className += " finalray";
+  document.body.className += "whitebk";
+  navbarshw();
+},2000);
+
+
+navbarhid();
+loading();
 
 
