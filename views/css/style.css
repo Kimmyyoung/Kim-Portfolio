@@ -193,15 +193,50 @@ li {
   transition: 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
-.nav-link:hover:before {
-  left: 0;
-  width: 100%;
-  color: var(--white-color);
+.hamburger {
+  cursor: pointer;
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
 }
 
-.nav-masthead .active {
-  color: var(--white-color);
-  border-bottom-color: var(--white-color);
+.hamburger .line {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background-color: var(--orange);
+  transition: all cubic-bezier(0.25, 0.1, 0.25, 1.55) 0.5s;
+  -moz-transition: all cubic-bezier(0.25, 0.1, 0.25, 1.55) 0.5s;
+  -webkit-transition: all cubic-bezier(0.25, 0.1, 0.25, 1.55) 0.5s;
+  -ms-transition: all cubic-bezier(0.25, 0.1, 0.25, 1.55) 0.5s;
+}
+
+.line1 {
+  top: 18%;
+}
+
+.line2 {
+  top: 48%;
+}
+
+.line3 {
+  top: 78%;
+}
+
+.hamburger.close .line1 {
+  transform: rotate(45deg);
+  top: 48%;
+}
+
+.hamburger.close .line2, .hamburger.close .line3 {
+  transform: rotate(-45deg);
+  top: 48%;
+}
+
+.scroll-nav {
+  box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .hero {
@@ -272,6 +307,7 @@ li {
   align-items: center;
   background-color: var(--orange);
   display: flex;
+  left: -5%;
   flex-direction: column;
   justify-content: center;
   padding: 4rem 0;
@@ -1046,6 +1082,344 @@ li {
     left: 50%;
     top: 50%;
     opacity: 1;
+  }
+}
+@media screen and (max-width: 900px) {
+  .featured-logo {
+    display: none;
+  }
+
+  .featured {
+    width: 600px;
+  }
+  .featured .featured-profile-img {
+    width: 350px;
+  }
+  .featured .featured-profile-img img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .featured .featured-description {
+    width: 350px;
+    align-items: center;
+    padding-left: 20px;
+  }
+  .featured .featured-description p {
+    font-size: 0.8rem;
+  }
+  .featured .featured-description h1 {
+    font-size: 1.7rem;
+  }
+  .featured .featured-date {
+    display: none;
+  }
+  .featured .featured-btn {
+    align-items: center;
+    top: 85%;
+    left: 33%;
+    width: 150px;
+    font-weight: 300;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  .nav-items {
+    position: absolute;
+    background: #f47731;
+    right: 0px;
+    height: 100vh;
+    left: -3%;
+    top: 84px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .nav-items li {
+    margin-bottom: 3rem;
+    font-size: 1.3rem;
+  }
+
+  .nav-items a:hover {
+    color: var(--white-color);
+  }
+
+  .nav-items a.active {
+    color: var(--white-color);
+  }
+
+  .nav-items a.active:hover {
+    color: var(--orange);
+  }
+
+  .nav-link:hover:before {
+    left: 0;
+    width: 100%;
+    color: var(--white-color);
+  }
+
+  .nav-masthead .active {
+    color: var(--white-color);
+    border-bottom-color: var(--white-color);
+  }
+
+  nav .hamburger {
+    display: block;
+  }
+
+  .featured {
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+  }
+  .featured .featured-profile-img {
+    width: 400px;
+    height: 400px;
+  }
+  .featured .featured-description-bk {
+    width: 400px;
+    height: 300px;
+    top: 60%;
+    left: 0%;
+    width: 100%;
+  }
+  .featured .featured-description {
+    width: 400px;
+    height: 300px;
+    top: 70%;
+    left: 0%;
+    width: 100%;
+  }
+  .featured .featured-description h1 {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .filter-div {
+    width: 450px;
+    height: 320px;
+    margin: 1rem;
+  }
+
+  .info-row2 {
+    flex-direction: column;
+  }
+
+  .info-detail .sm-heading {
+    margin-bottom: 0.5rem;
+  }
+
+  .info-detail .content {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .filter-btn {
+    width: 150px;
+  }
+
+  section.work-list {
+    display: flex;
+    justify-content: center;
+    padding: 0 70px;
+  }
+
+  .about-text {
+    max-width: 400px;
+  }
+
+  .about-img {
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .project-info {
+    padding: 10rem 4rem 6rem 4rem;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+  }
+
+  .underline:after {
+    top: 45px;
+  }
+
+  .featured-work {
+    width: 300px;
+    height: 500px;
+  }
+
+  .featured-work .work-img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .featured-work .work-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .featured-work .work-info {
+    width: 100%;
+    height: 100%;
+  }
+
+  .phase {
+    padding: 5rem 4rem 3rem 4rem;
+  }
+
+  .phase-img {
+    padding: 0rem;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .underline:after {
+    top: 30px;
+  }
+
+  .featured-title {
+    font-size: 1rem;
+  }
+
+  .featured-container {
+    padding: 0 30px;
+  }
+
+  .featured .featured-title h1 {
+    font-size: 2rem;
+  }
+
+  .filter-btn {
+    width: 120px;
+  }
+
+  section.work-list {
+    padding: 0 12px;
+  }
+
+  .filter-div {
+    width: 350px;
+    height: auto;
+  }
+
+  .work-overlay {
+    width: 325px;
+    height: auto;
+  }
+
+  .overlay-title {
+    font-size: 1.5rem;
+  }
+
+  .overlay-tools {
+    font-size: 0.6rem;
+    color: #fff;
+  }
+
+  .about-text {
+    max-width: 300px;
+  }
+
+  .about-img {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .filter-btn {
+    width: 90px;
+    font-size: 0.7em;
+  }
+
+  .project-title h1 {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    width: 250px;
+  }
+
+  .about-text h1 {
+    font-size: 2rem;
+  }
+
+  .about-img {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .underline:after {
+    top: 30px;
+  }
+
+  .featured-title {
+    font-size: 1rem;
+  }
+
+  .featured-container {
+    padding: 0 30px;
+  }
+
+  .featured .featured-title h1 {
+    font-size: 1.8em;
+  }
+
+  .featured-work .work-info {
+    padding: 0px 15px;
+  }
+
+  .featured-work .work-img {
+    width: auto;
+    height: auto;
+  }
+
+  .featured-work .work-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .filter-btn {
+    width: 80px;
+    font-size: 0.7em;
+  }
+
+  section.work-list {
+    padding: 0 5px;
+  }
+
+  .filter-div {
+    width: 310px;
+    height: auto;
+  }
+
+  .work-overlay {
+    width: 325px;
+    height: auto;
   }
 }
 

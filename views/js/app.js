@@ -38,5 +38,3 @@ featured.forEach((link) => {
     mouseCursor.style.zIndex = "1000";
   });
 });
-
-
