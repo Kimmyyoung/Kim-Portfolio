@@ -117,23 +117,15 @@ $(".hamburger").click(function(){
   $(".nav-items").toggleClass("nav-active");
 });
 
-
   
-
-
-
-  
-
-  
-  //loading page
-  
+/*----------------- Loading Page ------------------- */  
   
   let navbarhid = function(){
-    document.getElementById("mb-auto").className += "navloading";
+    document.getElementsByClassName("navbar")[0].style.visibility = "hidden";
   }
   
   let navbarshw = setTimeout(function(){
-    document.getElementById("mb-auto").className -= "navloading";
+    document.getElementsByClassName("navbar")[0].style.visibility = "visible";
   },2500);
   
   let loading = setTimeout(function() { 

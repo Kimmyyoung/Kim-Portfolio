@@ -103,9 +103,7 @@ body:after {
   border: 2px solid var(--white-color);
 }
 
-/*
- * Header
- */
+/* -------------------- Header (for All Page)  ------------------- */
 header {
   display: flex;
   position: fixed;
@@ -195,6 +193,7 @@ nav a:hover {
   position: relative;
   width: 30px;
   height: 30px;
+  margin-right: 10%;
 }
 
 .hamburger .line {
@@ -235,6 +234,7 @@ nav a:hover {
   box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
+/* -------------------------- Hero Section -------------------- */
 .hero {
   display: flex;
   align-items: center;
@@ -315,7 +315,6 @@ nav a:hover {
   display: flex;
   position: relative;
   width: 800px;
-  min-width: 400px;
   height: 300px;
   border-radius: 30px;
   overflow: hidden;
@@ -419,6 +418,7 @@ nav a:hover {
   bottom: 1%;
 }
 
+/* ------------- Footer (for All Page) ---------------*/
 .footer {
   height: 40vh;
   color: var(--white-color);
@@ -471,6 +471,7 @@ nav a:hover {
   align-items: center;
 }
 
+/*-----------Work Page ----------------------*/
 .work-title {
   margin-top: 10%;
   text-transform: uppercase;
@@ -628,6 +629,7 @@ nav a:hover {
   height: 60px;
 }
 
+/*------------ About Page ------------------*/
 .about-intro {
   padding: 10rem 10rem 0 rem 10rem;
   display: flex;
@@ -745,6 +747,7 @@ nav a:hover {
     left: -10%;
   }
 }
+/*---------Project Page ------------------*/
 .project {
   font-family: "Poppins", sans-serif;
 }
@@ -823,6 +826,7 @@ nav a:hover {
   font-weight: 800;
 }
 
+/*--------------Loading Page -------------- */
 #lastray {
   margin: auto;
   border-radius: 100%;
@@ -1080,6 +1084,7 @@ nav a:hover {
     opacity: 1;
   }
 }
+/*-----------------------Responsive Page---------------------------------------- */
 @media screen and (max-width: 900px) {
   .featured-logo {
     display: none;
@@ -1116,26 +1121,91 @@ nav a:hover {
     font-weight: 300;
     font-size: 0.8rem;
   }
+  .work-title {
+    align-items: center;
+    margin-left: 2%;
+    margin-top: 20%;
+  }
+  .work-btn {
+    width: 700px;
+    margin-bottom: 10px;
+  }
   .work-card {
-    margin-left: -3%;
+    margin-left: -1%;
+    display: flex;
+    justify-content: center;
   }
 }
-@media screen and (max-width: 800px) {
-  nav {
-    justify-content: space-between;
+@media (min-width: 800px) and (max-width: 900px) {
+  .work-title {
+    align-items: center;
+    margin-left: 2%;
+    margin-top: 20%;
+  }
+  .work-btn {
+    width: 700px;
+    margin-bottom: 10px;
+    margin-right: 20%;
+  }
+  .work-card {
+    margin-left: -1%;
+    display: flex;
+    justify-content: center;
+  }
+  .featured {
+    flex-direction: column;
+    width: 600px;
+    height: 800px;
+    left: -3%;
+  }
+  .featured .featured-card {
+    margin-left: -2%;
+  }
+  .featured .featured-profile-img {
+    width: 600px;
+    height: 600px;
+  }
+  .featured .featured-description-bk {
+    width: 600px;
+    height: 400px;
+    top: 60%;
+    left: 0%;
+    width: 100%;
+  }
+  .featured .featured-description {
+    width: 400px;
+    height: 300px;
+    top: 70%;
+    left: 0%;
+    width: 100%;
+  }
+  .featured .featured-description h1 {
+    font-size: 2.5rem;
+  }
+  .featured .featured-description p {
+    font-size: 1.5rem;
+  }
+  .featured .featured-btn {
+    width: 400px;
+    left: 20%;
+  }
+}
+@media (min-width: 501px) and (max-width: 800px) {
+  nav .logo {
+    width: fit-content;
   }
   nav .nav-items {
     position: absolute;
     background: #f47731;
     right: 0px;
     height: 100vh;
-    left: -1.5%;
+    left: 2%;
     top: 84px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-    transform: translateX(100%);
+    width: screen;
+    transform: translateX(120%);
     transition: transform 0.5s ease;
   }
   nav .nav-active {
@@ -1168,7 +1238,7 @@ nav a:hover {
     position: relative;
     width: 30px;
     height: 30px;
-    margin-right: 5%;
+    margin-right: 2%;
   }
   .featured {
     flex-direction: column;
@@ -1203,24 +1273,16 @@ nav a:hover {
   .work-title {
     align-items: center;
     margin-left: 2%;
+    margin-top: 20%;
   }
-  .filter {
-    align-items: center;
-  }
-  .filter .work-btn {
-    width: 400px;
-    padding: 1%;
-    margin: 1%;
+  .work-btn {
+    width: 500px;
+    margin-bottom: 10px;
   }
   .work-card {
-    margin-left: -3%;
-  }
-}
-@media screen and (min-width: 400px) and (max-width: 750px) {
-  .filter {
-    width: 450px;
-    height: 320px;
-    margin: 1rem;
+    margin-left: -1%;
+    display: flex;
+    justify-content: center;
   }
   .info-row2 {
     flex-direction: column;
@@ -1231,27 +1293,137 @@ nav a:hover {
   .info-detail .content {
     margin-bottom: 2rem;
   }
+}
+@media screen and (min-width: 350px) and (max-width: 500px) {
+  nav {
+    justify-content: space-between;
+  }
+  nav .nav-items {
+    position: absolute;
+    background: #f47731;
+    right: 0px;
+    height: 100vh;
+    left: -3%;
+    top: 84px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: screen;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+  }
+  nav .nav-active {
+    transform: translateX(0%);
+  }
+  nav .nav-items li {
+    margin-bottom: 3rem;
+    font-size: 1.3rem;
+  }
+  nav .nav-items a:hover {
+    color: var(--white-color);
+  }
+  nav .nav-items a.active {
+    color: var(--white-color);
+  }
+  nav .nav-items a.active:hover {
+    color: var(--orange);
+  }
+  nav .nav-link:hover:before {
+    left: 0;
+    width: 100%;
+    color: var(--blue);
+  }
+  nav .nav-masthead .active {
+    color: var(--white-color);
+    border-bottom-color: var(--white-color);
+  }
+  .hamburger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-right: 10%;
+  }
+  .featured-card {
+    padding-left: -3%;
+  }
+  .featured-card .featured-title h2 {
+    font-size: 2rem;
+  }
+  .featured-card .featured {
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    left: -4%;
+  }
+  .featured-card .featured-profile-img {
+    width: 300px;
+    height: 300px;
+  }
+  .featured-card .featured-description-bk {
+    width: 300px;
+    height: 500px;
+    top: 60%;
+    left: 0%;
+  }
+  .featured-card .featured-description {
+    width: 200px;
+    height: 100px;
+    top: 70%;
+    left: 13%;
+  }
+  .featured-card .featured-description h1 {
+    font-size: 1rem;
+    align-items: center;
+  }
+  .featured-card .featured-description P {
+    font-size: 0.5rem;
+    align-items: center;
+  }
+  .featured-card .featured-btn {
+    top: 85%;
+    left: 28%;
+    width: 128px;
+    height: 40px;
+  }
   .work-title {
     align-items: center;
     margin-left: 2%;
+    margin-top: 20%;
   }
-  .filter {
-    width: auto;
-    height: auto;
-    align-items: center;
-  }
-  .filter .work-btn {
-    width: 400px;
-    padding: 1%;
-    margin: 1%;
+  .work-btn {
+    width: 300px;
+    margin-bottom: 10px;
   }
   .work-card {
-    margin-left: -3%;
-  }
-  section.work-card {
+    margin-left: -1%;
     display: flex;
     justify-content: center;
-    padding: 0 70px;
+    padding: 10% 30%;
+  }
+  .footer {
+    margin-top: 2%;
+  }
+  .footer h1 {
+    font-size: 2rem;
+  }
+  .footer p {
+    display: none;
+  }
+  .footer a {
+    font-size: 1.5rem;
+  }
+  .footer .footer-link {
+    margin-left: 0%;
+  }
+  .info-row2 {
+    flex-direction: column;
+  }
+  .info-detail .sm-heading {
+    margin-bottom: 0.5rem;
+  }
+  .info-detail .content {
+    margin-bottom: 2rem;
   }
   .about-text {
     max-width: 400px;
