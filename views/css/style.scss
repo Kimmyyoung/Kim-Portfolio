@@ -327,7 +327,7 @@ nav a:hover{
   text-align: center;
   line-height: 1000em;
   max-width: 1400px;
-  margin-bottom: 3rem;
+  margin : 15% 0% 5% 0%;
   font-weight: 700;
   font-size: 40px;
   line-height: 4rem;
@@ -339,25 +339,29 @@ nav a:hover{
   align-items: center;
   background-color: var(--orange);
   display:flex;
-  left: -5%;
   flex-direction: column;
   justify-content: center;
   padding: 4rem 0;
   width: 100vw;
   font-family: 'Poppins', sans-serif;
+
+  & .third {
+    margin-bottom: 5%;
+  }
+
 }
 
 .featured {
   display: flex;
   position: relative;
   width: 800px;
-  //min-width: 400px;
   height: 300px;
   border-radius: 30px;
   overflow:hidden;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
-  margin: 30px;
+  margin: 3% 0% 0% 0%;
 }
+
 
 .featured-profile-img {
   height: 100%;
@@ -430,6 +434,8 @@ nav a:hover{
 }
 
 .featured-btn {
+  text-transform: uppercase;
+  letter-spacing: 3%;
   width:150px;
   height: 45px;
   border: none;
@@ -699,22 +705,22 @@ nav a:hover{
 }
 
 /*------------ About Page ------------------*/
-
 .about-intro{
   padding: 10rem 10rem 0 rem 10rem;
   display: flex; 
   flex-direction: column;
   align-items: center;
-  margin-top: 10%;
- }
-
-.about-intro h1{
-  text-align: center;
-  margin-bottom: 2rem;
+  margin: 10% 0% 10% 0%; 
+ 
+  & .about-intro h1{
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 }
+ 
 
 
-.about-card{
+.about-card {
   align-items: center;
   background-color: var(--orange);
   flex-direction: column;
@@ -723,90 +729,93 @@ nav a:hover{
   width:100vw;
   font-family: 'Poppins', sans-serif;
   display: block;
-}
-
-.about-card{
   color: var(--white-color);
-}
-
-.about-card h1{
-  color: var(--blue) !important;
-  font-weight: 800;
-  font-size: 3rem;
-  text-shadow: 0px 3px 3px #DDEEFF;  
-}
-
-.about-card p{
-  text-align: left;
-  line-height: 1.5;
-  margin: 10% 5% 5% 5%;
-  letter-spacing: 0.8px;
-  font-size: 1rem;
-
+  
+  & h1{
+    color: var(--blue) !important;
+    font-weight: 800;
+    font-size: 3rem;
+    text-shadow: 0px 3px 3px #DDEEFF;  
+  }
+  & p{
+    text-align: left;
+    line-height: 1.5;
+    margin: 10% 5% 5% 0%;
+    letter-spacing: 0.8px;
+    font-size: 1rem;
+  }
   & a {
     text-decoration: none;
     color: var(--blue);
     font-weight: 700;
   }
-}
-
-.about-img{
-  width: 500px;
-  height : 625px;
-  margin-left: 20%;
-}
-
-.about-links{
-  
-  & li{
+  & .about-img{
+    width: 500px;
+    height : 625px;
+    margin-left: 20%;
+  }
+  & .about-links li {
     list-style-type: none;
     float: left;
-    //margin-left: 20px;  
+    margin-left: 20px;  
   }
-  & li :hover{
-      transform: scale(1);
+  & .about-links li :hover {
+    transform: scale(1);
+  }
+  & .links-btn {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: var(--white-color);
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    overflow: hidden;
+    position: relative;
+  }
+  & .links-btn i{
+    line-height: 50px;
+    margin-left: 24%;
+    transition: 0.2s linear;
+    color:var(--orange) !important;
+  }
+  & .links-btn:hover i {
+    transform: scale(1.3);
+    color: var(--white-color) !important;
+  }
+  & .links-btn::before {
+      content: "";
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      background: var(--blue);
+      transform: rotate(45deg);
+      left: -110%;
+      top: 90%;
+    }
+  & .links-btn:hover::before {
+      animation: aaa 0.7s 1;
+      top: -10%;
+      left: -10%;
   }
 }
 
+// .links-btn::before {
+// 	content: "";
+// 	position: absolute;
+// 	width: 120%;
+// 	height: 120%;
+// 	background: var(--blue);
+// 	transform: rotate(45deg);
+// 	left: -110%;
+// 	top: 90%;
+// }
 
-.links-btn {
-	display: inline-block;
-	width: 50px;
-	height: 50px;
-	background: var(--white-color);
-	margin: 10px;
-	border-radius: 30%;
-	box-shadow: 0 5px 15px -5px #00000070;
-	overflow: hidden;
-	position: relative;
-}
-
-.links-btn i {
-	line-height: 50px;
-	font-size: 26px;
-	transition: 0.2s linear;
-  color:var(--orange) !important;
-}
-.links-btn:hover i {
-	transform: scale(1.3);
-	color: var(--white-color) !important;
-}
-.links-btn::before {
-	content: "";
-	position: absolute;
-	width: 120%;
-	height: 120%;
-	background: var(--blue);
-	transform: rotate(45deg);
-	left: -110%;
-	top: 90%;
-}
-
-.links-btn:hover::before {
-	animation: aaa 0.7s 1;
-	top: -10%;
-	left: -10%;
-}
+// .links-btn:hover::before {
+// 	animation: aaa 0.7s 1;
+// 	top: -10%;
+// 	left: -10%;
+// }
 
 @keyframes aaa {
 	0% {
@@ -1108,14 +1117,16 @@ nav a:hover{
        display: none;        
       }
       & .featured-btn {
+        text-transform: uppercase;
+        letter-spacing: 3%;
         align-items: center;
         top: 85%;
-        left: 33%;
+        align-items: center;
         width: 150px;
         font-weight: 300;
         font-size: 0.8rem;
       }
-    
+  
   }  
   // --------------- Work Page (Responsive) : Maximum - 900px Start ------------------
   .work-title{
@@ -1134,18 +1145,33 @@ nav a:hover{
   } 
  // --------------- Work Page (Responsive) : Maximum - 900px End ------------------
 
+ // ---------- About Me Page ----------------
+    .about-intro h1 {
+      margin: 10% 0% 10% 0%;
+    }
+ 
+    .about-details{
+      margin: 0;
+      width: 100% !important;
+      margin-bottom: 10% !important;
+    }
+    .about-details-img {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+    .about-img{
+      width: 100% !important;
+    }
 }
 
 @media (min-width: 800px) and (max-width: 900px) {
   .work-title {
     align-items: center;
-    margin-left: 2%;
     margin-top: 20%;
   }
   .work-btn {
     width: 700px;
-    margin-bottom: 10px;
-    margin-right: 20%;
+    margin-bottom: 2%;
   }
   .work-card{
     margin-left:-1%;
@@ -1157,11 +1183,6 @@ nav a:hover{
     flex-direction: column;
     width: 600px;
     height: 800px;
-    left: -3%;
-
-    & .featured-card {
-      margin-left: -2%;
-    }
     
     & .featured-profile-img {
       width : 600px;
@@ -1183,15 +1204,62 @@ nav a:hover{
     }
     & .featured-description h1{
       font-size: 2.5rem;
+      margin-bottom: 0.5%;
     }
     & .featured-description p{
       font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 0.5%;
     }
     & .featured-btn{
+      text-transform: uppercase;
+      letter-spacing: 3%;
+      margin-top: 3%;
       width: 400px;
-      left:20%;
+      left: 18%;
+      font-size: 2vw;
     }
+
+    // ---------- About Me Page ----------------
+    .about-card{
+      margin : 0% !important;
+      & .about-img{
+        margin: 0% !important;
+        width: 100% !important;
+      }
+  
+    }
+    .about-details{
+      margin: 0;
+      width: 100% !important;
+      margin-bottom: 10% !important;
+    }
+    .about-details-img {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+    .about-img{
+      margin: 0 !important;
+      width: 100% !important;
+    }
+
+
   }
+
+  // ---------- About Me Page ----------------
+  .about-details{
+    margin: 0;
+    max-width: 400px;
+    width : 100%;
+  }
+  .about-img {
+    max-width: 400px;
+  }
+
+  .about-intro h1 {
+    margin: 10% 0% 10% 0%;
+  }
+
 
 }
 
@@ -1208,132 +1276,12 @@ nav a:hover{
       background: #f47731;
       right: 0px;
       height: 100vh;
-      left: 2%;
+      left: -4%;
       top: 84px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: screen;
-      transform: translateX(120%);
-      transition: transform 0.5s ease;
-    }
-
-    & .nav-active {
-      transform: translateX(0%);
-    }
-  
-    & .nav-items li {
-      margin-bottom: 3rem;
-      font-size: 1.3rem;
-    }
-    & .nav-items a:hover {
-      color: var(--white-color);
-    }
-    & .nav-items a.active {
-      color: var(--white-color);
-    }
-    & .nav-items a.active:hover {
-      color: var(--orange);
-    }
-    & .nav-link:hover:before {
-      left: 0;
-      width: 100%;
-      color: var(--blue);
-    }
-    & .nav-masthead .active {
-      color: var(--white-color);
-      border-bottom-color: var(--white-color);
-    }
- }
-
- .hamburger {
-  display: block;
-  position: relative;
-  width: 30px;
-  height: 30px;
-  margin-right: 2%;
-  }
-
-  .featured {
-    flex-direction: column;
-    width: 400px;
-    height: 600px;
-    left: -3%;
-
-    & .featured-card {
-      margin-left: -2%;
-    }
-    
-    & .featured-profile-img {
-      width : 400px;
-      height: 400px;
-    }
-    & .featured-description-bk{
-      width: 400px;
-      height: 300px;
-      top: 60%;
-      left : 0%;
-      width: 100%;
-    }
-    & .featured-description {
-      width : 400px;
-      height: 300px;
-      top: 70%;
-      left: 0%;
-      width: 100%;
-    }
-    & .featured-description h1{
-      font-size: 1.4rem;
-    }
-  }
-
-  // ------------------ Work Page Start (Responsive) --------------
-  .work-title{
-    align-items: center;
-    margin-left: 2%;
-    margin-top: 20%;
-  }
-  .work-btn {
-    width: 500px;
-    margin-bottom: 10px;
-  }
-  .work-card{
-    margin-left:-1%;
-    display: flex;
-    justify-content: center;
-  }
-
-    // ------------------ Work Page End (Responsive) --------------
-
-  .info-row2 {
-    flex-direction: column;
-  }
-
-  .info-detail .sm-heading {
-    margin-bottom: 0.5rem;
-  }
-  
-  .info-detail .content {
-    margin-bottom: 2rem;
-  }
-  
-}
-
-@media screen and (min-width: 350px) and (max-width: 500px){
-  
-  nav {
-    justify-content: space-between;
-
-    & .nav-items {
-      position: absolute;
-      background: #f47731;
-      right: 0px;
-      height: 100vh;
-      left: -3%;
-      top: 84px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      align-content: center;
       width: screen;
       transform: translateX(100%);
       transition: transform 0.5s ease;
@@ -1372,14 +1320,159 @@ nav a:hover{
   position: relative;
   width: 30px;
   height: 30px;
-  margin-right: 10%;
+  margin-right: 0%;
   }
 
+  .featured {
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+
+    & .featured-profile-img {
+      width : 400px;
+      height: 400px;
+    }
+    & .featured-description-bk{
+      width: 400px;
+      height: 300px;
+      top: 60%;
+      left : 0%;
+      width: 100%;
+    }
+    & .featured-description {
+      width : 400px;
+      height: 300px;
+      top: 70%;
+      left: 0%;
+      width: 100%;
+    }
+    & .featured-description h1{
+      font-size: 1.4rem;
+    }
+    & .featured-description p{
+      text-align: center;
+      margin-bottom: 1%;
+    }
+    & .featured-btn {
+      width: 300px;
+      margin: 5%;
+      left: 8%;
+    }
+  }
+
+  // ------------------ Work Page Start (Responsive) --------------
+  .work-title{
+    align-items: center;
+    margin-top: 20%;
+  }
+  .work-btn {
+    width: 500px;
+    margin-bottom: 10px;
+  }
+  .work-card{
+    display: flex;
+    justify-content: center;
+  }
+
+    // ------------------ Work Page End (Responsive) --------------
+
+  .info-row2 {
+    flex-direction: column;
+  }
+
+  .info-detail .sm-heading {
+    margin-bottom: 0.5rem;
+  }
+  
+  .info-detail .content {
+    margin-bottom: 2rem;
+  }
+
+
+  
+  // ----------------------- About Me Page -------------------------
+
+  .about-intro h1{
+    margin: 10% 0% 10% 0%;
+  }
+  .about-card {
+    margin-top: 5% !important;
+  }
+  .about-details{
+    margin: 8% !important;
+    width : 90% !important;
+  }
+  .about-img {
+    align-items: center !important;
+    margin : 8% !important;
+    width : 90% !important;
+  }
+
+  
+
+}
+
+@media screen and (min-width: 350px) and (max-width: 500px){
+  
+  nav {
+    justify-content: space-between;
+
+    & .nav-items {
+      position: absolute;
+      background: #f47731;
+      right: 0px;
+      height: 100vh;
+      top: 84px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      width: 100%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease;
+    }
+
+    & .nav-active {
+      transform: translateX(0%);
+    }
+  
+    & .nav-items li {
+      margin-bottom: 3rem;
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    & .nav-items a:hover {
+      color: var(--white-color);
+    }
+    & .nav-items a.active {
+      color: var(--white-color);
+    }
+    & .nav-items a.active:hover {
+      color: var(--orange);
+    }
+    & .nav-link:hover:before {
+      left: 0;
+      width: 100%;
+      color: var(--blue);
+    }
+    & .nav-masthead .active {
+      color: var(--white-color);
+      border-bottom-color: var(--white-color);
+    }
+ }
+
+ .hamburger {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  }
+
+
+  
   .featured-card {
-
-    padding-left : -3%;
-
     & .featured-title h2{
+      margin: 8% 0% 5% 0%;
       font-size: 2rem;
     }
     
@@ -1388,10 +1481,12 @@ nav a:hover{
       flex-direction: column;
       width: 300px;
       height: 400px;
-      left: -4%;
+      margin-bottom: 2%;
     }
 
-    
+    & .third {
+      margin-bottom : 10%;
+    }
     & .featured-profile-img {
       width : 300px;
       height: 300px;
@@ -1416,14 +1511,17 @@ nav a:hover{
     }
     & .featured-description P{
       font-size: 0.5rem;
-      align-items: center;
+      text-align : center;
     }
 
     & .featured-btn {
-      top: 85%;
-      left: 28%;
-      width: 128px;
+      text-transform: uppercase;
+      letter-spacing: 3%;
+      top: 84%;
+      left: 17%;
+      width: 200px;
       height: 40px;
+      margin-bottom: 15%;
     }
   
   }
@@ -1431,7 +1529,6 @@ nav a:hover{
 // ------------------ Work Page (Responsive) : 350px - 500px ---------------
     .work-title{
       align-items: center;
-      margin-left: 2%;
       margin-top: 20%;
     }
     .work-btn {
@@ -1439,7 +1536,6 @@ nav a:hover{
       margin-bottom: 10px;
     }
     .work-card{
-      margin-left:-1%;
       display: flex;
       justify-content: center;
       padding: 10% 30%;
@@ -1464,11 +1560,8 @@ nav a:hover{
       margin-left:0%;
     }
   }
-
-
-
-
-
+  
+  
   .info-row2 {
     flex-direction: column;
   }
@@ -1535,4 +1628,24 @@ nav a:hover{
   .footer p {
     font-size: 0.8rem;
   }
+
+
+    //-------------------- Abount Me Page ----------------------
+    .about-intro h1{
+      margin: 20% 0% 10% 0%;
+    }
+    .about-card {
+      margin-top: 5% !important;
+    }
+    .about-details{
+      margin: 5% !important;
+      width : 90% !important;
+      max-width: 500px !important;
+    }
+    .about-img {
+      align-items: center !important;
+      margin : 5% !important;
+      width : 90% !important;
+      max-width: 500px !important;
+    }
 }
