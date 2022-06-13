@@ -23,26 +23,26 @@
     <script src="https://kit.fontawesome.com/b0671e4f35.js" crossorigin="anonymous"></script>
   </head>
 
-  <body class="d-flex h-100 text-center body project">
+  <body class="text-center body project">
     <div class="cursor" id="cursor"></div>
+          <nav>
+              <div class="logo">
+                <h1 class="float-md-start mb-0">KIMMY <span>kim</span></h1>
+              </div>
+              <ul class="nav nav-items nav-masthead justify-content-center float-md-end">
+                <li class="nav-link active" aria-current="page"><a href="index.html">Home</a></li>
+                <li class="nav-link"><a href="work.html">Work</a></li>
+                <li class="nav-link"><a href="about.html">About</a></li>
+              </ul>  
+              
+            <div class="hamburger">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>
+        </nav>
 
-
-    <nav id="mb-auto">
-      <div>
-        <h2 class="float-md-start mb-0">KIMMY <span>kim</span></h2>
-      </div>
-        <ul class="nav nav-masthead justify-content-center float-md-end">
-          <li class="nav-link active" aria-current="page"><a href="index.html">Home</a></li>
-          <li class="nav-link"><a href="work.html">Work</a></li>
-          <li class="nav-link"><a href="about.html">About</a></li>
-        </ul>
-      
-    </nav>
-
-          <div class="d-flex h-100 p-3 mx-auto flex-column">
-
-
-
+        <div class="d-flex flex-column"> 
             <section class="project-info">
 
                 <div class="row project-overview-card aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
@@ -50,18 +50,19 @@
                         <span class="project-cat">Front-end Development</span>
                         <h1 class="lg-heading">Note-taking App</h1>
                     </div>
-                    <div class="info-detail detail1 col-lg-2 col-sm-12">
-                      <span class="sm-heading">Timeline</span>
-                      <span class="content">March 2021</span>
-                  </div>
-                  <div class="info-detail detail2 col-lg-2 col-sm-12">
-                      <span class="sm-heading">Role</span>
-                      <span class="content">UI Designer, Web Developer</span>
-                  </div>
-                  <div class="info-detail detail3 col-lg-2 col-sm-12">
-                      <span class="sm-heading">Tools</span>
-                      <span class="content">Figma, React JS, Material UI</span>
-                  </div>
+                      <div class="info-detail detail1 col-lg-2 col-sm-12">
+                          <span class="sm-heading">Timeline</span>
+                          <span class="content">March 2021</span>
+                      </div>
+                      <div class="info-detail detail2 col-lg-2 col-sm-12">
+                          <span class="sm-heading">Role</span>
+                          <span class="content">UI Designer, Web Developer</span>
+                      </div>
+                      <div class="info-detail detail3 col-lg-2 col-sm-12">
+                          <span class="sm-heading">Tools</span>
+                          <span class="content">Figma, React JS, Material UI</span>
+                      </div>
+                
                 </div>
 
                 <div class="row info-row2 aos-init aos-animate project-info-detail" data-aos="fade-up" data-aos-duration="1000">
@@ -80,37 +81,37 @@
 
               
               <section class="project-detail">
+
                 <div class="phase row aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-                  <div class="phase-img col-lg-6">
+                  <div class="phase-img col-4">
                     <img src="img/pj1-design.png" alt="noteapp-mockup">
                   </div>
 
-                    <div class="phase-content col-lg-6">
+                    <div class="phase-content col-4">
                         <span class="phase-num">01</span>
                         <h1 class="lg-heading">Plan</h1>
                         <p class="content">
                           First, I spent some time coming up with the key functionalities I wanted to include and how I would implement them by trying out some popular note-taking apps out there. I decided to add the basic features of most note-taking apps that include creating, deleting and searching notes by title. 
                          </p>                
                     </div>
-
                 </div>
 
                 <div class="phase row aos-init content-2" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="phase-content col-lg-6">
+                    <div class="phase-content col-4">
                         <span class="phase-num">02</span>
                         <h1 class="lg-heading">Design</h1>
                         <p class="content"> I then created wireframes and mockups using Figma to figure out how I would position the elements and style them to ensure a seamless user experience on the app. This process also helped me to get a sense of how I should separate those UI elements into components. </p>                
                     </div>
-                    <div class="phase-img content-img-2 col-lg-6">
+                    <div class="phase-img content-img-2 col-4">
                       <img src="img/pj1-design.png" alt="noteapp-mockup">
                     </div>
                 </div>
 
                 <div class="phase row aos-init" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="phase-img col-lg-6">
+                    <div class="phase-img col-4">
                         <img src="img/pj1-design.png" alt="noteapp_coding">
                     </div>
-                    <div class="phase-content col-lg-6">
+                    <div class="phase-content col-4">
                         <span class="phase-num">03</span>
                         <h1 class="lg-heading">Implement</h1>
                         <p class="content">Based on the plan I made in the previous stage, I separate elements into three components that include App, Sidebar and Main. 'App' is the parent component that includes both 'Sidebar' and 'Main', and also have all the Hooks (useState) to keep track of the states of notes. 'Sidebar' component is the section where users can create, delete and search the notes and also see the list of notes. 'Main' component updates the active note that got clicked in the sidebar and displays the data for the certain note data passed down from the parent component through props. Check out the live code below.</p>                
@@ -160,7 +161,7 @@
 
             </div>
 
-            </div>
+  </div>
 
 <script type="module" src="js/app.js"></script>
 <script>AOS.init();</script>

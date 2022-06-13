@@ -13,4 +13,3 @@ $(".hamburger").click(function(){
   $(".hamburger").toggleClass("close");
   $(".nav-items").toggleClass("nav-active");
 });
-

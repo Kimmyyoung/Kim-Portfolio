@@ -79,15 +79,6 @@ body:after {
   background-size: cover;
 }
 
-.wrapper{
-  width : 1440px;
-
-}
-
-.cover-container {
-  max-width: 42em;
-}
-
 //-------------- Mouse Cursor --------------------
 .cursor {
   width: 3rem;
@@ -95,7 +86,7 @@ body:after {
   border: 2px solid var(--white-color);
   border-radius: 50%;
   position: absolute;
-  z-index: 1000;
+  z-index: 3;
   transform: translate(-50%, -50%);
   pointer-events: none;
   transition: all 0.3s ease;
@@ -107,18 +98,27 @@ body:after {
 
 .link-grow{
   transform: scale(2);
-  border: none;
-  background-color: var(--orange);
+  border: 10px solid var(--orange);
+  border-radius: 50%;
+  //background-color: var(--orange);
+  z-index: 3;
 }
 
 
 .link-grow-2{
-  transform: scale(1.5);
-  opacity: 90%;
-  border: none;
-  background-color: var(--blue);
-  border: 2px solid var(--white-color);
+  transform: scale(2);
+  border: 10px solid var(--blue);
+  border-radius: 50%;
+  z-index: 3;
 }
+
+.link-grow-3{
+  transform: scale(2);
+  border: 10px solid var(--white-color);
+  border-radius: 50%;
+  z-index: 3;
+}
+
 
 /* -------------------- Header (for All Page)  ------------------- */
 
@@ -137,7 +137,7 @@ header{
 //header-logo
 
 .float-md-start {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-top: 1%;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -147,14 +147,17 @@ header{
 
 //nav bar
 nav{
+  position: fixed !important;
   display: flex;
-  position : fixed;
+  background-color: var(--back-color);
   z-index: 2;
+  top: 0px;
   width: 100%;
   min-height: 8vh;
   padding: 0.5rem 3rem;
   align-items: center;
   justify-content: space-around;
+  // box-shadow: 0 1px 10px 2px rgba(0,0,0,0.2);
 }
 
 nav span{
@@ -162,18 +165,28 @@ nav span{
   text-transform: uppercase;
 }
 
-
-
 nav a{
   text-decoration: none;
-  color: var(--white-color);
+  color: var(--white-color) !important;
 }
 
-nav a:hover{
-  text-decoration: none;
-  color: var(--white-color);
+nav a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
 
+nav a:hover:after{
+  width: 100%; 
+  left: 0; 
+}
 
 .navbar ul{
   color: var(--white-color) !important;
@@ -320,8 +333,7 @@ nav a:hover{
 
 
 
-
-// featured-work section
+/* ----------------- featured-work section ---------------*/
 .featured-title h2{
   color: var(--white-color);
   text-align: center;
@@ -436,26 +448,22 @@ nav a:hover{
 .featured-btn {
   text-transform: uppercase;
   letter-spacing: 3%;
-  width:150px;
+  width:250px;
   height: 45px;
   border: none;
   border-radius: 50px;
   position: absolute;
-  right: 22%;
+  right: 15%;
   bottom: 23%;
   padding: 10px 20px;
   background-color: var(--orange); 
   color: var(--white-color);
 
-  :hover{
-    color: var(--black-color);
-    font-weight: 400;
-  }
 }
 
 .featured-btn a {
   color: var(--white-color) !important;
-  font-weight: 300;
+  font-weight: 400;
   text-decoration: none;
 }
 
@@ -469,7 +477,6 @@ nav a:hover{
 
 
 /* ------------- Footer (for All Page) ---------------*/
-// footer section
 
 .footer {
   height: 40vh;
@@ -594,7 +601,7 @@ nav a:hover{
   width: 100vw;
   font-family: 'Poppins', sans-serif;
   display: block;
-  margin-left:1rem;
+  
 }
 
 #parent{
@@ -704,6 +711,7 @@ nav a:hover{
   height: 60px;
 }
 
+
 /*------------ About Page ------------------*/
 .about-intro{
   padding: 10rem 10rem 0 rem 10rem;
@@ -800,23 +808,6 @@ nav a:hover{
   }
 }
 
-// .links-btn::before {
-// 	content: "";
-// 	position: absolute;
-// 	width: 120%;
-// 	height: 120%;
-// 	background: var(--blue);
-// 	transform: rotate(45deg);
-// 	left: -110%;
-// 	top: 90%;
-// }
-
-// .links-btn:hover::before {
-// 	animation: aaa 0.7s 1;
-// 	top: -10%;
-// 	left: -10%;
-// }
-
 @keyframes aaa {
 	0% {
 		left: -110%;
@@ -907,12 +898,18 @@ nav a:hover{
   
 
   & .phase{
-    padding: 0rem 5rem 5rem 5rem;
+    padding: 0rem 1rem 3rem 1rem;
+    display: flex;
+    justify-content: center;
   }
   & .phase-img{
-    align-items: center;    
+    width: auto;
+    max-width: 650px;
   }
-
+  & .phase-img :hover {
+    transform: scale(1.05);
+    transition-duration: all 1s;
+  }
   & .content-2{
     text-align: right !important;
   }
@@ -1082,7 +1079,23 @@ nav a:hover{
 
 
 /*-----------------------Responsive Page---------------------------------------- */
+@media (min-width: 900px) and (max-width: 990px) {
+ 
 
+  .info-detail{
+    padding: 1rem 0rem 0rem 1rem;
+  }
+
+  .phase{
+    width: 100% !important;
+
+    & .phase-content{
+      width: 100% !important;
+      margin: 1rem;
+    }
+   }
+
+}
 
 @media screen and (max-width: 900px){
 
@@ -1145,7 +1158,7 @@ nav a:hover{
   } 
  // --------------- Work Page (Responsive) : Maximum - 900px End ------------------
 
- // ---------- About Me Page ----------------
+ // --------------- About Me Page ----------------------------------------
     .about-intro h1 {
       margin: 10% 0% 10% 0%;
     }
@@ -1162,6 +1175,24 @@ nav a:hover{
     .about-img{
       width: 100% !important;
     }
+
+
+    //------------- Project Page --------------------
+    
+    .info-detail{
+      padding: 1rem 0rem 0rem 1rem;
+    }
+
+    .phase{
+      width: 100% !important;
+
+      & .phase-content{
+        width: 100% !important;
+        margin: 1rem;
+      }
+     }
+
+
 }
 
 @media (min-width: 800px) and (max-width: 900px) {
@@ -1259,6 +1290,8 @@ nav a:hover{
   .about-intro h1 {
     margin: 10% 0% 10% 0%;
   }
+
+
 
 
 }
@@ -1408,6 +1441,26 @@ nav a:hover{
     width : 90% !important;
   }
 
+
+  
+   //------------- Project Page --------------------
+    .project-detail{
+      justify-content: center;
+      padding: 2rem;
+    } 
+
+    .info-detail{
+      padding: 1rem 0rem 0rem 1rem;
+    }
+
+    .phase{
+      width: 100% !important;
+
+      & .phase-content{
+        width: 100% !important;
+        margin: 1rem;
+      }
+     }
   
 
 }
@@ -1557,7 +1610,7 @@ nav a:hover{
       font-size: 1.5rem;
     }
     & .footer-link {
-      margin-left:0%;
+      margin-left:2.5rem;
     }
   }
   
@@ -1648,4 +1701,33 @@ nav a:hover{
       width : 90% !important;
       max-width: 500px !important;
     }
+
+
+    //------------------ Project Page ------------------------
+
+    .project-detail{
+      justify-content: center;
+      padding: 2rem;
+    } 
+
+    .info-detail{
+      padding: 1rem 0rem 0rem 1rem;
+    }
+
+    .phase{
+      width: 100% !important;
+
+      & .phase-img {
+        width: 100% !important;
+      }
+      & .phase-img img{
+        width: 100% !important;
+      }
+      & .phase-content{
+        width: 100% !important;
+        margin: 1rem;
+      }
+     }
+  
+
 }

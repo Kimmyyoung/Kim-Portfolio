@@ -21,7 +21,8 @@ $(document).ready(function(){
   $('.work-btn').click(function(){
     $(this).addClass('work-active').siblings().removeClass('work-active');
   })
-  
+
+
     
 // Mobile Menu 
 const menu = document.querySelector('.hamburger');

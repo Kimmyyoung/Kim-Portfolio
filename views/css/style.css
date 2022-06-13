@@ -65,21 +65,13 @@ body:after {
   background-size: cover;
 }
 
-.wrapper {
-  width: 1440px;
-}
-
-.cover-container {
-  max-width: 42em;
-}
-
 .cursor {
   width: 3rem;
   height: 3rem;
   border: 2px solid var(--white-color);
   border-radius: 50%;
   position: absolute;
-  z-index: 1000;
+  z-index: 3;
   transform: translate(-50%, -50%);
   pointer-events: none;
   transition: all 0.3s ease;
@@ -91,16 +83,23 @@ body:after {
 
 .link-grow {
   transform: scale(2);
-  border: none;
-  background-color: var(--orange);
+  border: 10px solid var(--orange);
+  border-radius: 50%;
+  z-index: 3;
 }
 
 .link-grow-2 {
-  transform: scale(1.5);
-  opacity: 90%;
-  border: none;
-  background-color: var(--blue);
-  border: 2px solid var(--white-color);
+  transform: scale(2);
+  border: 10px solid var(--blue);
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.link-grow-3 {
+  transform: scale(2);
+  border: 10px solid var(--white-color);
+  border-radius: 50%;
+  z-index: 3;
 }
 
 /* -------------------- Header (for All Page)  ------------------- */
@@ -117,7 +116,7 @@ header {
 }
 
 .float-md-start {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-top: 1%;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -126,9 +125,11 @@ header {
 }
 
 nav {
+  position: fixed !important;
   display: flex;
-  position: fixed;
+  background-color: var(--back-color);
   z-index: 2;
+  top: 0px;
   width: 100%;
   min-height: 8vh;
   padding: 0.5rem 3rem;
@@ -143,12 +144,25 @@ nav span {
 
 nav a {
   text-decoration: none;
-  color: var(--white-color);
+  color: var(--white-color) !important;
 }
 
-nav a:hover {
-  text-decoration: none;
-  color: var(--white-color);
+nav a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+nav a:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 .navbar ul {
@@ -287,6 +301,7 @@ nav a:hover {
   animation: flash 0.5s none infinite alternate;
 }
 
+/* ----------------- featured-work section ---------------*/
 .featured-title h2 {
   color: var(--white-color);
   text-align: center;
@@ -393,25 +408,21 @@ nav a:hover {
 .featured-btn {
   text-transform: uppercase;
   letter-spacing: 3%;
-  width: 150px;
+  width: 250px;
   height: 45px;
   border: none;
   border-radius: 50px;
   position: absolute;
-  right: 22%;
+  right: 15%;
   bottom: 23%;
   padding: 10px 20px;
   background-color: var(--orange);
   color: var(--white-color);
 }
-.featured-btn :hover {
-  color: var(--black-color);
-  font-weight: 400;
-}
 
 .featured-btn a {
   color: var(--white-color) !important;
-  font-weight: 300;
+  font-weight: 400;
   text-decoration: none;
 }
 
@@ -535,7 +546,6 @@ nav a:hover {
   width: 100vw;
   font-family: "Poppins", sans-serif;
   display: block;
-  margin-left: 1rem;
 }
 
 #parent {
@@ -799,10 +809,17 @@ nav a:hover {
   margin: 0rem -1rem 0rem -1rem;
 }
 .project-detail .phase {
-  padding: 0rem 5rem 5rem 5rem;
+  padding: 0rem 1rem 3rem 1rem;
+  display: flex;
+  justify-content: center;
 }
 .project-detail .phase-img {
-  align-items: center;
+  width: auto;
+  max-width: 650px;
+}
+.project-detail .phase-img :hover {
+  transform: scale(1.05);
+  transition-duration: all 1s;
 }
 .project-detail .content-2 {
   text-align: right !important;
@@ -1077,6 +1094,18 @@ nav a:hover {
   }
 }
 /*-----------------------Responsive Page---------------------------------------- */
+@media (min-width: 900px) and (max-width: 990px) {
+  .info-detail {
+    padding: 1rem 0rem 0rem 1rem;
+  }
+  .phase {
+    width: 100% !important;
+  }
+  .phase .phase-content {
+    width: 100% !important;
+    margin: 1rem;
+  }
+}
 @media screen and (max-width: 900px) {
   .featured-logo {
     display: none;
@@ -1143,6 +1172,16 @@ nav a:hover {
   }
   .about-img {
     width: 100% !important;
+  }
+  .info-detail {
+    padding: 1rem 0rem 0rem 1rem;
+  }
+  .phase {
+    width: 100% !important;
+  }
+  .phase .phase-content {
+    width: 100% !important;
+    margin: 1rem;
   }
 }
 @media (min-width: 800px) and (max-width: 900px) {
@@ -1353,6 +1392,20 @@ nav a:hover {
     margin: 8% !important;
     width: 90% !important;
   }
+  .project-detail {
+    justify-content: center;
+    padding: 2rem;
+  }
+  .info-detail {
+    padding: 1rem 0rem 0rem 1rem;
+  }
+  .phase {
+    width: 100% !important;
+  }
+  .phase .phase-content {
+    width: 100% !important;
+    margin: 1rem;
+  }
 }
 @media screen and (min-width: 350px) and (max-width: 500px) {
   nav {
@@ -1476,7 +1529,7 @@ nav a:hover {
     font-size: 1.5rem;
   }
   .footer .footer-link {
-    margin-left: 0%;
+    margin-left: 2.5rem;
   }
   .info-row2 {
     flex-direction: column;
@@ -1544,6 +1597,26 @@ nav a:hover {
     margin: 5% !important;
     width: 90% !important;
     max-width: 500px !important;
+  }
+  .project-detail {
+    justify-content: center;
+    padding: 2rem;
+  }
+  .info-detail {
+    padding: 1rem 0rem 0rem 1rem;
+  }
+  .phase {
+    width: 100% !important;
+  }
+  .phase .phase-img {
+    width: 100% !important;
+  }
+  .phase .phase-img img {
+    width: 100% !important;
+  }
+  .phase .phase-content {
+    width: 100% !important;
+    margin: 1rem;
   }
 }
 
