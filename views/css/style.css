@@ -331,7 +331,7 @@ nav a:hover:after {
 .featured {
   display: flex;
   position: relative;
-  width: 800px;
+  width: 900px;
   height: 300px;
   border-radius: 30px;
   overflow: hidden;
@@ -341,6 +341,7 @@ nav a:hover:after {
 
 .featured-profile-img {
   height: 100%;
+  margin-left: -3%;
 }
 
 .featured-description-bk {
@@ -656,6 +657,12 @@ nav a:hover:after {
   margin-bottom: 2rem;
 }
 
+.about-work-table td {
+  width: 600px;
+  height: 60px;
+  border-bottom: white 2px solid;
+}
+
 .about-card {
   align-items: center;
   background-color: var(--orange);
@@ -801,6 +808,16 @@ nav a:hover:after {
   margin: 0rem -1rem 0rem -1rem;
 }
 
+.portfolio-thumb {
+  background-image: url("viewsimgPortfolio-mockup.jpg");
+  min-height: 600px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0rem -1rem 0rem -1rem;
+}
+
 .project-detail {
   padding: 6rem 10rem 6rem 10rem;
   background-color: var(--white-color);
@@ -809,13 +826,13 @@ nav a:hover:after {
   margin: 0rem -1rem 0rem -1rem;
 }
 .project-detail .phase {
-  padding: 0rem 1rem 3rem 1rem;
+  padding: 0rem 0rem 3rem 0rem;
   display: flex;
   justify-content: center;
 }
 .project-detail .phase-img {
   width: auto;
-  max-width: 650px;
+  max-width: 800px;
 }
 .project-detail .phase-img :hover {
   transform: scale(1.05);
@@ -1115,6 +1132,7 @@ nav a:hover:after {
   }
   .featured .featured-profile-img {
     width: 350px;
+    margin-left: 0%;
   }
   .featured .featured-profile-img img {
     width: 100%;
