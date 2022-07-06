@@ -798,20 +798,20 @@ nav a:hover:after {
   border-left: solid 3px var(--white-color);
 }
 
-.noteapp-thumb {
-  background-image: url("http://www.ecopaccanada.com/wp-content/uploads/2022/04/2-scaled.jpg");
+.portfolio-thumb {
+  background-image: url("/views/img/Portfolio-mockup.jpg");
   min-height: 600px;
-  background-attachment: fixed;
+  background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0rem -1rem 0rem -1rem;
 }
 
-.portfolio-thumb {
-  background-image: url("viewsimgPortfolio-mockup.jpg");
+.ecopac-thumb {
+  background-image: url("/views/img/ecopac-thumb.jpg");
   min-height: 600px;
-  background-attachment: fixed;
+  background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -850,6 +850,20 @@ nav a:hover:after {
   color: var(--blue);
   font-size: 3rem;
   font-weight: 800;
+}
+.project-detail .preview {
+  background: var(--orange);
+  border-radius: 16px;
+  width: 180px;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  position: relative;
+  align-content: center;
+  letter-spacing: 1px;
+}
+
+.preview:hover {
+  transform: scaleX(1);
 }
 
 /*--------------Loading Page -------------- */
