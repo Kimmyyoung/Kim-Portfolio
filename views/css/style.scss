@@ -944,8 +944,119 @@ nav a:hover:after{
   margin: 0rem -1rem 0rem -1rem;
 }
 
+.dgc-thumb {
+  background-image: url("/views/img/digital-creatives-thumb.jpg");
+  min-height: 600px;
+  background-attachment: fixed !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0rem -1rem 0rem -1rem;
+}
+// digital creatives page
+
+.dgc-phase {
+  margin-top: 5%;
+}
+
+.dgc-content{
+  margin : 3%;
+}
+
+.dgc-lg-heading {
+  color: var(--orange);
+  margin-left: 10px;
+  line-height: 1000em;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 4rem;
+  letter-spacing: 0.1em; 
+}
+
+.auto-slide{
+  margin-bottom: 10%;
+}
+
+// dgc slide
+.slider {
+  height: 395px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slider::before, .slider::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  animation: scroll 80s linear infinite;
+  display: flex;
+  width: calc(250px * 18);
+
+}
+
+.slider .slide-track:hover {
+  animation-play-state: paused;
+}
+
+.slide-IG img{
+  width: 394px;
+  height: 394px;
+}
+.slide img{
+  width: 274px;
+  height: 410px;
+}
+
+// .slider .slide {
+//   height: 250px;
+//   width: 300px;
+// }
 
 
+// .slide:nth-child(1), .slide:nth-child(10) {
+//   background-color: yellow;
+// }
+
+// .slide:nth-child(2), .slide:nth-child(11) {
+//   background-color: coral;
+// }
+
+// .slide:nth-child(3), .slide:nth-child(12) {
+//   background-color: blue;
+// }
+
+// .slide:nth-child(4), .slide:nth-child(13) {
+//   background-color: red;
+// }
+
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-406px * 9));
+  }
+}
 
 //project-detail section
 
