@@ -341,7 +341,8 @@ nav a:hover:after {
 
 .featured-profile-img {
   height: 100%;
-  margin-left: -3%;
+  margin-left: 0%;
+  align-items: left;
 }
 
 .featured-description-bk {
@@ -349,7 +350,7 @@ nav a:hover:after {
   border-radius: 30px;
   position: absolute;
   top: 0%;
-  left: 40%;
+  left: 38%;
   height: 100%;
   width: 108%;
 }
@@ -430,7 +431,7 @@ nav a:hover:after {
 .featured-date {
   position: absolute;
   color: grey;
-  left: 85%;
+  left: 72%;
   bottom: 1%;
 }
 
@@ -535,7 +536,6 @@ nav a:hover:after {
   font-weight: 500;
   border-radius: 20px;
   transform: translateY(-7px);
-  box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.73);
 }
 
 .work-card {
@@ -1284,7 +1284,7 @@ nav a:hover:after {
     width: 600px;
   }
   .featured .featured-profile-img {
-    width: 350px;
+    width: 400px;
     margin-left: 0%;
   }
   .featured .featured-profile-img img {
