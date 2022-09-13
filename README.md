@@ -13,19 +13,26 @@
   <hr/>
   <p> Kimmy's Portfolio Project </p>
   
+  
+  
+<h3> :sparkles: Preview </h3>
+<hr/>
+
 ![portfolio-readme](https://user-images.githubusercontent.com/97567561/189766383-e0471453-22ee-467a-9d0a-b1c8300aada1.png)
 
 
 
 <h3> :link: Web Link </h3>
 <hr/>
-
+<p>Click :point_right:  </p>
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FKimmyyoung%2FPortfolio&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
+<br/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kimmyyoung&layout=compact)](https://github.com/Kimmyyoung/github-readme-stats" />
 
+
+<img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kimmyyoung&layout=compact)](https://github.com/Kimmyyoung/github-readme-stats" />
 <h3> :memo: Platforms & Languages  </h3>
 <hr/>
 
@@ -33,6 +40,7 @@
 ![Sass](https://img.shields.io/badge/Sass-CC6699.svg?&style=for-the-badge&logo=Sass&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E.svg?&style=for-the-badge&logo=JavaScript&logoColor=white)
 ![jQuery](https://img.shields.io/badge/jQuery-0769AD.svg?&style=for-the-badge&logo=jQuery&logoColor=white)
+
 <h3> :hammer: Tools </h3>
 <hr/>
 
