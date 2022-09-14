@@ -966,6 +966,11 @@ nav a:hover:after {
   width: auto;
   max-width: 800px;
 }
+.content-img-2 img {
+  width: 650px;
+  padding-top: 30px;
+  height: max-content;
+}
 .project-detail .phase-img :hover {
   transform: scale(1.05);
   transition-duration: all 1s;
