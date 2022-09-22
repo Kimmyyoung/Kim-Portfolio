@@ -410,6 +410,7 @@ nav {
     letter-spacing: 0.2rem;
   }
   }
+
 /* ------------- Footer (for All Page) ---------------*/
 .footer {
   height: 40vh;
@@ -622,21 +623,24 @@ nav {
   flex-direction: column;
   align-items: center;
   margin: 10% 0% 10% 0%; 
- 
-  & .about-intro h1{
+
+  & h1{
     text-align: center;
     margin-bottom: 2rem;
+    color: var(--white-color);
+    line-height: 1000em;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 4rem;
+    letter-spacing: 0.1em; 
   }
 }
 
 .about-work-table td{
      width: 600px;
      height: 60px;
-     border-bottom: white 2px solid;
-     //border:#000 1px solid;
+     border-bottom: white 1.5px solid;
  }
-
-
 
 .about-card {
   align-items: center;
@@ -693,9 +697,10 @@ nav {
   }
   & .links-btn i{
     line-height: 50px;
-    margin-left: 24%;
+    margin-left: 30%;
     transition: 0.2s linear;
     color:var(--orange) !important;
+    font-size: 25px;
   }
   & .links-btn:hover i {
     transform: scale(1.3);
@@ -738,6 +743,8 @@ nav {
 
 .project{
   font-family: 'Poppins', sans-serif;
+  letter-spacing: 1.8px;
+
 }
 
 .project-info {
@@ -746,6 +753,7 @@ nav {
   color: var(--white-color);
   margin: 4rem -1rem 0rem -1rem;
   background-color: var(--orange);
+  font-family: 'Poppins', sans-serif;
 
   & .project-overview-card {
     display:flex;
@@ -753,9 +761,14 @@ nav {
     margin-top: 3rem;
   }
 
+  & .project-title h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
   & .project-cat {
     color: var(--white-color);
     letter-spacing: 1.8px;
+    font-family: 'Poppins', sans-serif;
   }
 
   & .project-overview p{
@@ -979,6 +992,7 @@ nav {
     color: var(--orange) !important;
     margin-bottom: 2.5rem;
     font-size: 3rem;
+    font-weight: 800;
   }
   
   & .phase-num{
@@ -1138,8 +1152,6 @@ nav {
   border: 1px solid;
 }
 
-
-/*ANIMATIONS*/
 @keyframes pump {
     0% {width: 50px; height: 50px;}
     83% {width: 88px; height: 88px;}
