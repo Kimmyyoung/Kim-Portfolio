@@ -904,12 +904,23 @@ nav li {
   width: auto;
   max-width: 800px;
 }
+.project-detail .phase-img img {
+  width: 700px;
+}
+.project-detail .live {
+  width: 416px !important;
+  height: 485px;
+  border-radius: 2%;
+}
 .project-detail .phase-img :hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   transition-duration: all 1s;
 }
 .project-detail .content-2 {
   text-align: right !important;
+}
+.project-detail .content-4 {
+  text-align: left !important;
 }
 .project-detail .phase h1 {
   color: var(--orange) !important;
@@ -926,19 +937,30 @@ nav li {
   background: var(--orange);
   border-radius: 20px;
   width: 180px;
+  padding: 10px 20px 10px 20px;
+  position: relative;
+  align-content: center;
+  letter-spacing: 1px;
+  border: #f47731 1px solid;
+  margin-right: 10px;
+}
+.project-detail .preview .preview-link {
+  text-decoration: none;
   color: white;
+}
+.project-detail .code {
+  background: var(--white-color);
+  border: #f47731 1px solid;
+  border-radius: 20px;
+  width: 180px;
   padding: 10px 20px 10px 20px;
   position: relative;
   align-content: center;
   letter-spacing: 1px;
 }
-.project-detail .preview-link {
+.project-detail .code_link {
   text-decoration: none;
-  color: white;
-}
-
-.preview:hover {
-  transform: scaleX(1);
+  color: #f47731;
 }
 
 /*--------------Loading Page -------------- */
@@ -1207,7 +1229,6 @@ nav li {
     width: 100% !important;
   }
   .phase .phase-content {
-    width: 100% !important;
     margin: 1rem;
   }
   .box {
@@ -1323,7 +1344,7 @@ nav li {
     width: 600px;
     height: 400px;
     top: 60%;
-    left: 0%;
+    left: -5%;
     width: 100%;
   }
   .featured .featured-description {
@@ -1392,7 +1413,7 @@ nav li {
     right: 0px;
     height: 100vh;
     left: -4%;
-    top: 84px;
+    top: 65%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1528,7 +1549,7 @@ nav li {
     background: #f47731;
     right: 0px;
     height: 100vh;
-    top: 84px;
+    top: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1590,7 +1611,7 @@ nav li {
     width: 300px;
     height: 500px;
     top: 60%;
-    left: 0%;
+    left: -5%;
   }
   .featured-card .featured-description {
     width: 200px;

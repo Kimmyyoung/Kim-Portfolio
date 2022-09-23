@@ -975,18 +975,29 @@ nav {
   & .phase{
     padding: 0rem 0rem 3rem 0rem;
     display: flex;
-    justify-content: center;
+    justify-content: center;   
   }
   & .phase-img{
     width: auto;
     max-width: 800px;
   }
+  & .phase-img img {
+    width: 700px;
+  }
+  & .live{
+    width: 416px !important;
+    height: 485px;
+    border-radius: 2%;
+  }
   & .phase-img :hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition-duration: all 1s;
   }
   & .content-2{
     text-align: right !important;
+  }
+  & .content-4 {
+    text-align: left !important;
   }
   & .phase h1{
     color: var(--orange) !important;
@@ -1004,21 +1015,32 @@ nav {
     background: var(--orange);
     border-radius: 20px;
     width: 180px;
-    color: white;
+    padding: 10px 20px 10px 20px;
+    position: relative;
+    align-content: center;
+    letter-spacing: 1px;
+    border: #f47731 1px solid;
+    margin-right: 10px;
+    & .preview-link {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  
+  & .code {
+    background: var(--white-color);
+    border: #f47731 1px solid;
+    border-radius: 20px;
+    width: 180px;
     padding: 10px 20px 10px 20px;
     position: relative;
     align-content: center;
     letter-spacing: 1px;
   }
-  & .preview-link {
-    text-decoration: none;
-    color: white;
-  }
- 
-}
-
-.preview:hover {
-  transform: scaleX(1);
+  & .code_link {
+      text-decoration: none;
+      color: #f47731;
+    }
 }
 
 
@@ -1183,12 +1205,9 @@ nav {
     width: 100% !important;
 
     & .phase-content{
-      width: 100% !important;
       margin: 1rem;
     }
    }
-
-
    .box{
     height: 200px !important;
    }
@@ -1329,7 +1348,7 @@ nav {
       width: 600px;
       height: 400px;
       top: 60%;
-      left : 0%;
+      left : -5%;
       width: 100%;
     }
     & .featured-description {
@@ -1410,13 +1429,14 @@ nav {
     & .logo {
       width: fit-content;
     }
+
     & .nav-items {
       position: absolute;
       background: #f47731;
       right: 0px;
       height: 100vh;
       left: -4%;
-      top: 84px;
+      top: 65%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1581,7 +1601,7 @@ nav {
       background: #f47731;
       right: 0px;
       height: 100vh;
-      top: 84px;
+      top: 60%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1654,7 +1674,7 @@ nav {
       width: 300px;
       height: 500px;
       top: 60%;
-      left : 0%;
+      left : -5%;
 
     }
 
