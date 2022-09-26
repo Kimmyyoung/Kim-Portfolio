@@ -326,17 +326,15 @@ nav li {
 }
 .featured .featured-description-bk {
   background-color: var(--white-color);
-  border-radius: 30px;
+  border-radius: 20px;
   position: absolute;
   top: 0%;
-  left: 38%;
+  left: 40%;
   height: 100%;
-  width: 108%;
+  width: 100%;
 }
 .featured .featured-profile-img {
   height: 100%;
-  margin-left: 0%;
-  align-items: left;
 }
 .featured .featured-logo {
   height: 80px;
@@ -754,6 +752,15 @@ nav li {
   background-image: url("/views/img/Portfolio-mockup.jpg");
   min-height: 600px;
   background-attachment: fixed !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0rem -1rem 0rem -1rem;
+}
+
+.twitter-thumb {
+  background-image: url("/views/img/twitter_mockup.jpg");
+  min-height: 800px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
