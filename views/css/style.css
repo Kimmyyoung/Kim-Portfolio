@@ -387,6 +387,7 @@ nav li {
   background-size: cover;
   background-position: 10% 40%;
   margin: 3% 0%;
+  word-break: keep-all;
 }
 .footer h1 {
   font-weight: 700;
@@ -403,24 +404,26 @@ nav li {
   font-weight: 700;
   font-size: 1.2rem;
 }
-.footer .fab {
-  font-weight: 400;
-  display: inline-block;
-  color: var(--white-color) !important;
-  font-size: 30px;
+.footer .footer-link {
+  justify-content: center;
 }
 .footer ul {
   margin-block-start: 1em;
   margin-block-end: 1em;
-  margin-left: 28%;
+  justify-content: center;
 }
 .footer li {
   display: list-item;
-  text-align: center;
   list-style-type: none;
   float: left;
-  margin-left: 20px;
+  margin-left: 12%;
   align-items: center;
+}
+.footer li .fab {
+  font-weight: 400;
+  display: inline-block;
+  color: var(--white-color) !important;
+  font-size: 30px;
 }
 
 /*-----------Work Page ----------------------*/
@@ -635,8 +638,7 @@ nav li {
   font-weight: 700;
 }
 .about-card .about-img {
-  width: 500px;
-  height: 625px;
+  width: auto;
   margin-left: 20%;
 }
 .about-card .about-links li {
@@ -896,16 +898,19 @@ nav li {
   }
 }
 .project-detail {
-  padding: 6rem 10rem 6rem 10rem;
   background-color: var(--white-color);
   color: var(--black-color) !important;
   text-align: left;
   margin: 0rem -1rem 0rem -1rem;
+  padding-top: 5rem;
+  justify-content: center;
 }
 .project-detail .phase {
   padding: 0rem 0rem 3rem 0rem;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  word-break: break-all;
 }
 .project-detail .phase-img {
   width: auto;
@@ -913,11 +918,6 @@ nav li {
 }
 .project-detail .phase-img img {
   width: 700px;
-}
-.project-detail .live {
-  width: 416px !important;
-  height: 485px;
-  border-radius: 2%;
 }
 .project-detail .phase-img :hover {
   transform: scale(1.02);
@@ -1234,10 +1234,255 @@ nav li {
   .box {
     height: 250px;
   }
+  .project-detail {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-detail .phase {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 /* Medium Devices, Desktops : ~ 992px */
+@media only screen and (max-width: 992px) {
+  .box {
+    height: 275px;
+  }
+  .project-info .info-detail {
+    margin-top: 5%;
+  }
+  .project-detail .phase-content {
+    width: max-content;
+    padding: 5% 20% 5% 20%;
+  }
+  .about-card .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-card .about-details {
+    width: max-content;
+    justify-content: center;
+  }
+  .about-card .about-details-img {
+    width: max-content;
+  }
+  .about-card .about-links {
+    margin-left: 20%;
+  }
+}
 /* Small Devices, Tablets : ~ 768px */
+@media only screen and (max-width: 768px) {
+  nav .logo {
+    width: fit-content;
+  }
+  nav .nav-items {
+    position: absolute;
+    background: #f47731;
+    right: 0px;
+    height: 100vh;
+    left: -4%;
+    top: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: screen;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+  }
+  nav .nav-active {
+    transform: translateX(0%);
+  }
+  nav .nav-items li {
+    margin-bottom: 3rem;
+    font-size: 1.3rem;
+  }
+  nav .nav-items a:hover {
+    color: var(--white-color);
+  }
+  nav .nav-items a.active {
+    color: var(--white-color);
+  }
+  nav .nav-items a.active:hover {
+    color: var(--orange);
+  }
+  nav .nav-link:hover:before {
+    left: 0;
+    width: 100%;
+    color: var(--blue);
+  }
+  nav .nav-masthead .active {
+    color: var(--white-color);
+    border-bottom-color: var(--white-color);
+  }
+  .hamburger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-right: 10%;
+  }
+  .featured {
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+    justify-content: center;
+  }
+  .featured .featured-logo {
+    top: 50%;
+    left: 38%;
+  }
+  .featured img {
+    width: 100%;
+    max-width: 500px;
+    height: 80%;
+    top: -10%;
+  }
+  .featured .featured-description-bk {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    top: 60%;
+    left: -5%;
+  }
+  .featured .featured-date {
+    display: none;
+  }
+  .featured .featured-description {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    top: 70%;
+    left: -5%;
+  }
+  .featured .featured-description h1 {
+    font-size: 1.4rem;
+  }
+  .featured .featured-description p {
+    text-align: center;
+    margin-bottom: 1%;
+  }
+  .featured .featured-btn {
+    width: 100%;
+    max-width: 300px;
+    bottom: 6%;
+  }
+  .box {
+    width: 100%;
+    max-width: 400px;
+    height: max-content;
+  }
+  .filter .work-btn {
+    width: 80%;
+    max-width: 500px;
+    margin-bottom: 10px;
+  }
+  .work-card .overlay-title {
+    margin-top: 25%;
+  }
+  .work-card .overlay-tools {
+    margin-bottom: 25%;
+  }
+  .project-info {
+    padding: 5rem;
+    max-width: 700px;
+  }
+  .project-info .project-overview-card {
+    width: 100%;
+    max-width: 700px;
+  }
+  .phase .phase-img {
+    width: 100%;
+    max-width: 700px;
+  }
+  .phase .phase-img img {
+    width: 100%;
+  }
+}
 /* Extra Small Devices, Phones : ~ 480px */
+@media only screen and (max-width: 480px) {
+  .featured button {
+    width: 100%;
+    max-width: 500px;
+    justify-content: center;
+  }
+  .phase h1 {
+    line-height: 1.5;
+  }
+  .about-card .about-links {
+    justify-content: center;
+    padding: 0%;
+    margin: 10%;
+  }
+  .about-card .about-details-img {
+    width: 100%;
+    max-width: max-width;
+  }
+  .about-card .about-details-img img {
+    margin: 0%;
+  }
+}
 /* Custom, iPhone Retina : ~ 320px */
+@media only screen and (max-width: 320px) {
+  body button {
+    width: 100%;
+    max-width: 300px;
+    right: 0%;
+    position: relative;
+    left: 1%;
+  }
+  .hamburger {
+    margin-right: 0%;
+  }
+  .featured {
+    height: 500px;
+  }
+  .featured .featured-logo {
+    margin-left: 0%;
+    margin-top: 5%;
+  }
+  .featured .featured-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  .featured p {
+    padding-bottom: 1%;
+  }
+  .work-title {
+    margin-top: 30%;
+  }
+  .aboutpage .about-intro {
+    margin-top: 30%;
+  }
+  .aboutpage .about-links li {
+    margin: 0%;
+    padding: 0%;
+  }
+  .aboutpage .about-img {
+    width: 100%;
+    max-width: 300px;
+  }
+  .phase {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .phase button {
+    margin: 3%;
+  }
+  .footer {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+    position: relative;
+    left: 20%;
+    bottom: 6%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
