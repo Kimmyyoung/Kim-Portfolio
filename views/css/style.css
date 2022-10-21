@@ -184,7 +184,7 @@ nav li {
   position: relative;
   width: 30px;
   height: 30px;
-  margin-right: 10%;
+  margin-right: 5%;
 }
 .hamburger .line {
   position: absolute;
@@ -753,7 +753,6 @@ nav li {
 .portfolio-thumb {
   background-image: url("/views/img/Portfolio-mockup.jpg");
   height: 20em;
-  background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -772,7 +771,6 @@ nav li {
 .ecopac-thumb {
   background-image: url("/views/img/ecopac-thumb.jpg");
   height: 20em;
-  background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -782,7 +780,6 @@ nav li {
 .blog-thumb {
   background-image: url("/views/img/blog-mockup.jpg");
   height: 20em;
-  background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -792,7 +789,6 @@ nav li {
 .sweetpomona-thumb {
   background-image: url("/views/img/sweetpomona-mockup.jpg");
   height: 20em;
-  background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -802,7 +798,6 @@ nav li {
 .hotchi-thumb {
   background-image: url("/views/img/hotchi-mockup.jpg");
   height: 20em;
-  background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -812,7 +807,6 @@ nav li {
 .dgc-thumb {
   background-image: url("/views/img/digital-creatives-thumb.jpg");
   height: 20em;
-  background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1321,7 +1315,7 @@ nav li {
     position: relative;
     width: 30px;
     height: 30px;
-    margin-right: 10%;
+    margin-right: 5%;
   }
   .featured {
     flex-direction: column;
@@ -1438,6 +1432,12 @@ nav li {
     right: 0%;
     position: relative;
     left: 1%;
+  }
+  .work-title {
+    margin-top: 40%;
+  }
+  .about-intro {
+    margin-top: 40%;
   }
   .hamburger {
     margin-right: 0%;
