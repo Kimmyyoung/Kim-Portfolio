@@ -752,7 +752,7 @@ nav li {
 
 .portfolio-thumb {
   background-image: url("/views/img/Portfolio-mockup.jpg");
-  min-height: 600px;
+  height: 20em;
   background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
@@ -762,7 +762,7 @@ nav li {
 
 .twitter-thumb {
   background-image: url("/views/img/twitter_mockup.jpg");
-  min-height: 800px;
+  height: 20em;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -771,7 +771,7 @@ nav li {
 
 .ecopac-thumb {
   background-image: url("/views/img/ecopac-thumb.jpg");
-  min-height: 600px;
+  height: 20em;
   background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
@@ -781,7 +781,7 @@ nav li {
 
 .blog-thumb {
   background-image: url("/views/img/blog-mockup.jpg");
-  min-height: 600px;
+  height: 20em;
   background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
@@ -791,7 +791,7 @@ nav li {
 
 .sweetpomona-thumb {
   background-image: url("/views/img/sweetpomona-mockup.jpg");
-  min-height: 600px;
+  height: 20em;
   background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
@@ -801,7 +801,7 @@ nav li {
 
 .hotchi-thumb {
   background-image: url("/views/img/hotchi-mockup.jpg");
-  min-height: 600px;
+  height: 20em;
   background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
@@ -811,7 +811,7 @@ nav li {
 
 .dgc-thumb {
   background-image: url("/views/img/digital-creatives-thumb.jpg");
-  min-height: 600px;
+  height: 20em;
   background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
@@ -1411,6 +1411,12 @@ nav li {
   .phase h1 {
     line-height: 1.5;
   }
+  .work-title {
+    margin-top: 40%;
+  }
+  .about-intro {
+    margin-top: 40%;
+  }
   .about-card .about-links {
     justify-content: center;
     padding: 0%;
@@ -1451,7 +1457,7 @@ nav li {
     padding-bottom: 1%;
   }
   .work-title {
-    margin-top: 30%;
+    margin-top: 50%;
   }
   .aboutpage .about-intro {
     margin-top: 30%;
