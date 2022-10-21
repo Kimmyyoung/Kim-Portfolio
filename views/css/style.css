@@ -1312,10 +1312,8 @@ nav li {
   }
   .hamburger {
     display: block;
-    position: relative;
     width: 30px;
     height: 30px;
-    margin-right: 5%;
   }
   .featured {
     flex-direction: column;
