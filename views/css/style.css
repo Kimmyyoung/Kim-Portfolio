@@ -23,6 +23,17 @@
   font-weight: normal;
   font-style: normal;
 }
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -42,7 +53,8 @@ html {
 body {
   background: radial-gradient(var(--back-color), var(--back-color), var(--main-color-dark));
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
   color: white;
   margin-left: -1%;
   font-family: "TT Firs Neue", Arial, sans-serif;
@@ -77,7 +89,8 @@ body:after {
   transition: all 0.3s ease;
   transition-property: background, transform;
   transform-origin: 100% 100%;
-  backdrop-filter: sepia(20%);
+  -webkit-backdrop-filter: sepia(20%);
+          backdrop-filter: sepia(20%);
   background-size: cover;
 }
 
@@ -161,11 +174,16 @@ nav a:hover:after {
 }
 nav ul {
   color: var(--white-color) !important;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-padding-start: 40px;
+          padding-inline-start: 40px;
 }
 nav li {
   display: list-item;
@@ -258,7 +276,8 @@ nav li {
   /* Change colour of Cursor Here */
   background-color: var(--white-color);
   z-index: 1;
-  animation: flash 0.5s none infinite alternate;
+  -webkit-animation: flash 0.5s none infinite alternate;
+          animation: flash 0.5s none infinite alternate;
 }
 
 /* ----------------- featured-work section ---------------*/
@@ -335,6 +354,7 @@ nav li {
 }
 .featured .featured-profile-img {
   height: 100%;
+  width: 450px;
 }
 .featured .featured-logo {
   height: 80px;
@@ -366,6 +386,7 @@ nav li {
   font-weight: 200;
   margin-bottom: -5%;
   letter-spacing: 0.1rem;
+  text-align: center;
 }
 .featured-description h1 {
   font-size: 2rem;
@@ -408,8 +429,10 @@ nav li {
   justify-content: center;
 }
 .footer ul {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
   justify-content: center;
 }
 .footer li {
@@ -567,6 +590,12 @@ nav li {
   background-size: 100% 100%;
 }
 
+.box7 {
+  background: url("https://i.ibb.co/HpW1hKp/expensetracker-mockup.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
 .box:hover {
   opacity: 1;
   background: rgba(0, 0, 0, 0.7);
@@ -682,9 +711,25 @@ nav li {
   top: 90%;
 }
 .about-card .links-btn:hover::before {
-  animation: aaa 0.7s 1;
+  -webkit-animation: aaa 0.7s 1;
+          animation: aaa 0.7s 1;
   top: -10%;
   left: -10%;
+}
+
+@-webkit-keyframes aaa {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    top: -10%;
+    left: -10%;
+  }
 }
 
 @keyframes aaa {
@@ -753,6 +798,15 @@ nav li {
 .portfolio-thumb {
   background-image: url("/views/img/Portfolio-mockup.jpg");
   height: 20em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0rem -1rem 0rem -1rem;
+}
+
+.expensetracker-thumb {
+  background-image: url("/views/img/expensetracker-mockup.jpg");
+  height: 40em;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -854,7 +908,6 @@ nav li {
 .slider::after {
   right: 0;
   top: 0;
-  -webkit-transform: rotateZ(180deg);
   transform: rotateZ(180deg);
 }
 
@@ -864,13 +917,15 @@ nav li {
 }
 
 .slider .slide-track {
-  animation: scroll 80s linear infinite;
+  -webkit-animation: scroll 80s linear infinite;
+          animation: scroll 80s linear infinite;
   display: flex;
   width: 4500px;
 }
 
 .slider .slide-track:hover {
-  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .slide-IG img {
@@ -881,6 +936,15 @@ nav li {
 .slide img {
   width: 274px;
   height: 410px;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-3654px);
+  }
 }
 
 @keyframes scroll {
@@ -1014,7 +1078,8 @@ nav li {
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  animation: pump 4s infinite ease-in-out;
+  -webkit-animation: pump 4s infinite ease-in-out;
+          animation: pump 4s infinite ease-in-out;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
@@ -1029,8 +1094,10 @@ nav li {
   opacity: 1;
   width: 10px;
   height: 10px;
-  animation: ray 1s infinite ease-out;
-  animation-delay: 1s;
+  -webkit-animation: ray 1s infinite ease-out;
+          animation: ray 1s infinite ease-out;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
@@ -1052,7 +1119,8 @@ nav li {
   height: 5px;
   border-radius: 100%;
   opacity: 0;
-  animation: particle 1s infinite ease-in;
+  -webkit-animation: particle 1s infinite ease-in;
+          animation: particle 1s infinite ease-in;
   left: 0%;
   top: 0%;
 }
@@ -1106,51 +1174,63 @@ nav li {
 }
 
 .particle1 {
-  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .particle2 {
-  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 
 .particle3 {
-  animation-delay: 2.2s;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
 }
 
 .particle4 {
-  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .particle5 {
-  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .particle6 {
-  animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 
 .particle7 {
-  animation-delay: 2.5s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 
 .particle8 {
-  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 .particle9 {
-  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .particle10 {
-  animation-delay: 2.5s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 
 .particle11 {
-  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
 }
 
 .particle12 {
-  animation-delay: 1.7s;
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
 }
 
 .loaded {
@@ -1169,9 +1249,30 @@ nav li {
 }
 
 .finalray {
-  animation: ray 1s ease-out;
-  animation-delay: 0.3s;
+  -webkit-animation: ray 1s ease-out;
+          animation: ray 1s ease-out;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
   border: 1px solid;
+}
+
+@-webkit-keyframes pump {
+  0% {
+    width: 50px;
+    height: 50px;
+  }
+  83% {
+    width: 88px;
+    height: 88px;
+  }
+  85% {
+    width: 90px;
+    height: 90px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 @keyframes pump {
@@ -1192,6 +1293,20 @@ nav li {
     height: 50px;
   }
 }
+@-webkit-keyframes ray {
+  0% {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    border-width: 1px;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    border-width: 5px;
+  }
+}
 @keyframes ray {
   0% {
     width: 10px;
@@ -1204,6 +1319,21 @@ nav li {
     height: 200px;
     opacity: 0;
     border-width: 5px;
+  }
+}
+@-webkit-keyframes particle {
+  0% {
+    left: 0%;
+    top: 0%;
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    left: 50%;
+    top: 50%;
+    opacity: 1;
   }
 }
 @keyframes particle {
@@ -1237,6 +1367,9 @@ nav li {
     flex-direction: row;
     justify-content: center;
   }
+  .featured-profile-img {
+    width: 100% !important;
+  }
 }
 /* Medium Devices, Desktops : ~ 992px */
 @media only screen and (max-width: 992px) {
@@ -1247,6 +1380,8 @@ nav li {
     margin-top: 5%;
   }
   .project-detail .phase-content {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     padding: 5% 20% 5% 20%;
   }
@@ -1255,10 +1390,14 @@ nav li {
     flex-direction: column;
   }
   .about-card .about-details {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     justify-content: center;
   }
   .about-card .about-details-img {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
   }
   .about-card .about-links {
@@ -1268,6 +1407,8 @@ nav li {
 /* Small Devices, Tablets : ~ 768px */
 @media only screen and (max-width: 768px) {
   nav .logo {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
   }
   nav .nav-items {
@@ -1364,6 +1505,8 @@ nav li {
   .box {
     width: 100%;
     max-width: 400px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
   }
   .filter .work-btn {
@@ -1487,6 +1630,4 @@ nav li {
     left: 20%;
     bottom: 6%;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

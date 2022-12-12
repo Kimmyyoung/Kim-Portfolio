@@ -363,7 +363,7 @@ nav {
   }
   & .featured-profile-img {
     height: 100%;
-    
+    width: 450px;
     //margin-left: 0%;
     //align-items: left;
   }
@@ -399,6 +399,8 @@ nav {
     font-weight: 200;
     margin-bottom: -5%;
     letter-spacing: 0.1rem;
+    text-align:center;
+
   }
 
   &  h1{
@@ -600,6 +602,12 @@ nav {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }  
+
+.box7{
+  background: url("https://i.ibb.co/HpW1hKp/expensetracker-mockup.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 
 .box:hover {
   opacity: 1;  
@@ -803,6 +811,17 @@ nav {
 .portfolio-thumb {
   background-image: url("/views/img/Portfolio-mockup.jpg");
   height: 20em;
+  //background-attachment: fixed !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0rem -1rem 0rem -1rem;
+}
+
+
+.expensetracker-thumb {
+  background-image: url("/views/img/expensetracker-mockup.jpg");
+  height: 40em;
   //background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
@@ -1228,6 +1247,11 @@ nav {
       }
     }
 
+    .featured-profile-img {
+      width: 100% !important;
+      //margin-left: 0%;
+      //align-items: left;
+    }
    
 }
 
