@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node express.js",
-    "sass" : "sass --watch ../views/css/style.scss ../views/css/style.css"
+    "sass": "sass --watch ../views/css/style.scss ../views/css/style.css",
+    "scss": "node-sass --watch ./views/css/style.scss -o ./views/css/style.css"
   },
   "author": "Heeyoung Kim (kimmy)",
   "license": "ISC",
@@ -14,7 +15,9 @@
     "aos": "^2.3.4",
     "bootstrap-icons": "^1.8.1",
     "ejs": "^3.1.7",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "node-sass": "^8.0.0",
+    "sass-watch": "^0.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",

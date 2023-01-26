@@ -456,7 +456,6 @@ nav li {
 }
 .work-title .lg-heading {
   color: var(--white-color);
-  line-height: 1000em;
   font-weight: 800;
   font-size: 40px;
   line-height: 4rem;
@@ -822,6 +821,15 @@ nav li {
   margin: 0rem -1rem 0rem -1rem;
 }
 
+.moviesite-thumb {
+  background-image: url("/views/img/moviesite.jpg");
+  height: 50em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0rem -1rem 0rem -1rem;
+}
+
 .ecopac-thumb {
   background-image: url("/views/img/ecopac-thumb.jpg");
   height: 20em;
@@ -955,6 +963,11 @@ nav li {
     transform: translateX(-3654px);
   }
 }
+.scene_preview img {
+  width: 380px;
+  height: 260px;
+}
+
 .project-detail {
   background-color: var(--white-color);
   color: var(--black-color) !important;
@@ -992,6 +1005,12 @@ nav li {
   margin-bottom: 2.5rem;
   font-size: 3rem;
   font-weight: 800;
+}
+.project-detail .phase-subtitle {
+  width: 60%;
+}
+.project-detail .phase-subtitle h1 {
+  font-size: 2rem !important;
 }
 .project-detail .phase-num {
   color: var(--blue);
