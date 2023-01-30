@@ -963,8 +963,11 @@ nav li {
     transform: translateX(-3654px);
   }
 }
+.scene_preview {
+  align-items: center;
+}
 .scene_preview img {
-  width: 380px;
+  width: 32.5%;
   height: 260px;
 }
 
@@ -1011,6 +1014,9 @@ nav li {
 }
 .project-detail .phase-subtitle h1 {
   font-size: 2rem !important;
+}
+.project-detail .phase-subtitle .phase-img {
+  width: 100%;
 }
 .project-detail .phase-num {
   color: var(--blue);

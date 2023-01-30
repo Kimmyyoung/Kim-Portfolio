@@ -1006,10 +1006,11 @@ nav {
 }
 
 .scene_preview {
+  align-items: center;
   & img {
-    width: 380px;
+    width: 32.5%;
     height: 260px;
-  }  
+  }
 }
 
 
@@ -1066,6 +1067,9 @@ nav {
     width: 60%; 
     & h1{
       font-size: 2rem !important;
+    }
+    & .phase-img {
+      width : 100%;
     }
   }
   & .phase-num{
