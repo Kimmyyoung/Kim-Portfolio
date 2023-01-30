@@ -1040,12 +1040,11 @@ nav {
     word-break:break-all;
   }
   & .phase-img{
-    width: auto;
-    max-width: 800px;
+    width: 100%;
   }
-  & .phase-img img {
-    width: 700px;
-  }
+  // & .phase-img img {
+  //   width: 700px;
+  // }
   // & .live{
   //   width: auto !important;
     

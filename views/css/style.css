@@ -993,11 +993,7 @@ nav li {
   word-break: break-all;
 }
 .project-detail .phase-img {
-  width: auto;
-  max-width: 800px;
-}
-.project-detail .phase-img img {
-  width: 700px;
+  width: 100%;
 }
 .project-detail .phase-img :hover {
   transform: scale(1.02);
